@@ -1,0 +1,31 @@
+{
+ "name": "数据分布特征",
+ "children": [
+  {
+   "name": "集中趋势",
+   "children": [
+      {"name": "众数 Mode", "size": 3938},
+      {"name": "中位数 Median", "size": 3812},
+      {"name": "平均数 Mean", "size": 6714}
+     ]
+    },
+    {
+     "name": "离散程度",
+     "children": [
+      {"name": "异众比率 Variation ratio", "size": 3534},
+      {"name": "四分位数差 Quartile deviation", "size": 5731},
+      {"name": "极差 Range", "size": 7840},
+      {"name": "平均差 Mean deviation", "size": 5914},
+      {"name": "方差或标准差 Variance/ Standard variance", "size": 3416},
+	  {"name": "离散系数 Coefficient of variance", "size": 3433}
+     ]
+    },
+    {
+     "name": "分布形状",
+     "children": [
+      {"name": "偏态系数 Skewness", "size": 7074},
+      {"name": "峰态系数 Kurtosis", "size": 7074}
+     ]
+    }
+   ]
+  }
