@@ -2,8 +2,12 @@
   "name": "node",
   "version": "0.0.0",
   "description": "Node",
-  "main": "app.js",
+  "main": "starter.js",
   "author": {
     "name": "zhk"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0"
   }
 }
