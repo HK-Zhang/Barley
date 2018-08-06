@@ -82,6 +82,7 @@ function emitter_listener_demo() {
     }
 
     Account.prototype.__proto__ = events.EventEmitter.prototype;
+    Account.prototype.constructor = Account;
 
     function displayBalance() {
         console.log("Account balance: $%d", this.balance);
@@ -126,6 +127,7 @@ function callback_parameter_demo() {
     };
 
     CarShow.prototype.__proto__ = events.EventEmitter.prototype;
+    CarShow.prototype.constructor = CarShow;
 
     var show = new CarShow();
 
