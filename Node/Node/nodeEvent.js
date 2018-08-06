@@ -225,6 +225,12 @@ exports.callback_closure_demo = () => {
         });
     })
     
+    cars.forEach(function(t) {
+        var message = "Saw a " + t;
+        logCar(message, function () {
+            console.log("Normal Callback: " + message);
+        });
+    })
 
 };
 

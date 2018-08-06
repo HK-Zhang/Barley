@@ -12,5 +12,5 @@ const nodeEvent = require('./nodeEvent');
 // nodeEvent.timeout_immediate();
 // nodeEvent.emitter_listener_demo();
 // nodeEvent.callback_parameter_demo();
-// nodeEvent.callback_closure_demo();
-nodeEvent.callback_chain_demo();
+nodeEvent.callback_closure_demo();
+// nodeEvent.callback_chain_demo();
