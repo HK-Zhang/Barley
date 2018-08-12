@@ -2,6 +2,7 @@
 import { square, diag } from './lib';
 const nodeEvent = require('./nodeEvent');
 const Bufferdemo = require("./buffer");
+const Streamdemo = require("./stream");
 // import simple_timer_demo from './nodeEvent/simple_timer'
 
 // console.log(square(11)); // 121
@@ -17,4 +18,9 @@ const Bufferdemo = require("./buffer");
 // nodeEvent.callback_chain_demo();
 
 // Bufferdemo.buffer_write();
-Bufferdemo.buffer_read();
+// Bufferdemo.buffer_read();
+// Bufferdemo.buffer_copy();
+// Bufferdemo.buffer_slice();
+// Bufferdemo.buffer_concat();
+
+Streamdemo.strean_read();
