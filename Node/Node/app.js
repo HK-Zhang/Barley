@@ -23,4 +23,6 @@ const Streamdemo = require("./stream");
 // Bufferdemo.buffer_slice();
 // Bufferdemo.buffer_concat();
 
-Streamdemo.strean_read();
+// Streamdemo.strean_read();
+// Streamdemo.strem_write();
+Streamdemo.stream_duplex();
