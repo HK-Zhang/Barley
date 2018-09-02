@@ -25,4 +25,5 @@ const Streamdemo = require("./stream");
 
 // Streamdemo.strean_read();
 // Streamdemo.strem_write();
-Streamdemo.stream_duplex();
+// Streamdemo.stream_duplex();
+Streamdemo.stream_transform();
