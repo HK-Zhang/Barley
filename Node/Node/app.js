@@ -27,4 +27,6 @@ const Streamdemo = require("./stream");
 // Streamdemo.strem_write();
 // Streamdemo.stream_duplex();
 // Streamdemo.stream_transform();
-Streamdemo.stream_piped();
+// Streamdemo.stream_piped();
+// Streamdemo.zip_buffers();
+Streamdemo.zlib_file();
