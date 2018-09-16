@@ -3,6 +3,7 @@ import { square, diag } from './lib';
 const nodeEvent = require('./nodeEvent');
 const Bufferdemo = require("./buffer");
 const Streamdemo = require("./stream");
+import { fileWrite, fileWriteSync, fileWriteAsync, fileWriteStream, fileRead, fileReadSync, fileReadAsync, fileReadStream, fileStats, fileReaddir } from './fileSystem';
 // import simple_timer_demo from './nodeEvent/simple_timer'
 
 // console.log(square(11)); // 121
@@ -29,4 +30,15 @@ const Streamdemo = require("./stream");
 // Streamdemo.stream_transform();
 // Streamdemo.stream_piped();
 // Streamdemo.zip_buffers();
-Streamdemo.zlib_file();
+// Streamdemo.zlib_file();
+
+// fileWrite();
+// fileWriteSync();
+// fileWriteAsync();
+// fileWriteStream();
+// fileRead();
+// fileReadSync();
+// fileReadAsync();
+// fileReadStream();
+// fileStats();
+fileReaddir();
