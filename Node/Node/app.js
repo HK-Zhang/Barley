@@ -1,9 +1,27 @@
-'use strict';
-import { square, diag } from './lib';
-const nodeEvent = require('./nodeEvent');
+"use strict";
+import { square, diag } from "./lib";
+const nodeEvent = require("./nodeEvent");
 const Bufferdemo = require("./buffer");
 const Streamdemo = require("./stream");
-import { fileWrite, fileWriteSync, fileWriteAsync, fileWriteStream, fileRead, fileReadSync, fileReadAsync, fileReadStream, fileStats, fileReaddir } from './fileSystem';
+import {
+  fileWrite,
+  fileWriteSync,
+  fileWriteAsync,
+  fileWriteStream,
+  fileRead,
+  fileReadSync,
+  fileReadAsync,
+  fileReadStream,
+  fileStats,
+  fileReaddir
+} from "./fileSystem";
+import{
+    httpServerStatic,
+    httpClientStatic,
+    httpServerGet,
+    httpClientGet
+} from "./httpService";
+
 // import simple_timer_demo from './nodeEvent/simple_timer'
 
 // console.log(square(11)); // 121
@@ -41,4 +59,9 @@ import { fileWrite, fileWriteSync, fileWriteAsync, fileWriteStream, fileRead, fi
 // fileReadAsync();
 // fileReadStream();
 // fileStats();
-fileReaddir();
+// fileReaddir();
+
+// httpServerStatic();
+// httpClientStatic();
+httpServerGet();
+// httpClientGet();
