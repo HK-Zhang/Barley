@@ -1,0 +1,3 @@
+openssl genrsa -out server.pem 2048
+openssl req -new -key server.pem -out server.csr
+openssl x509 -req -days 365 -in server.csr -signkey server.pem -out server.crt

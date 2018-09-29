@@ -19,7 +19,10 @@ import{
     httpServerStatic,
     httpClientStatic,
     httpServerGet,
-    httpClientGet
+    httpClientGet,
+    httpServerPost,
+    httpClientPost,
+    httpServerExternal
 } from "./httpService";
 
 // import simple_timer_demo from './nodeEvent/simple_timer'
@@ -63,5 +66,8 @@ import{
 
 // httpServerStatic();
 // httpClientStatic();
-httpServerGet();
+// httpServerGet();
 // httpClientGet();
+// httpServerPost();
+// httpClientPost();
+httpServerExternal();
