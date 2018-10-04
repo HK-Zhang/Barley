@@ -3,6 +3,8 @@ import { square, diag } from "./lib";
 const nodeEvent = require("./nodeEvent");
 const Bufferdemo = require("./buffer");
 const Streamdemo = require("./stream");
+const sockerServer = require('./socketServer');
+const socketClient = require('./socketClient');
 import {
   fileWrite,
   fileWriteSync,
@@ -70,4 +72,7 @@ import{
 // httpClientGet();
 // httpServerPost();
 // httpClientPost();
-httpServerExternal();
+// httpServerExternal();
+
+sockerServer.socketServerRun();
+// socketClient.socketClientRun();
