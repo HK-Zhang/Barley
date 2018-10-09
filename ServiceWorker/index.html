@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 An image will appear here in 3 seconds (<a href="https://thenounproject.com/term/cat/6725/">cat.svg by Marco Hernandez</a>):
+<!-- notification service is working on chrome (not inprivate) -->
+<script src="NotificationService.js"></script>
 <script>
     navigator.serviceWorker.register('sw.js')
         .then(reg => {
