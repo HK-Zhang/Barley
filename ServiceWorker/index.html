@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+An image will appear here in 3 seconds (<a href="https://thenounproject.com/term/cat/6725/">cat.svg by Marco Hernandez</a>):
+<!-- notification service is working on chrome (not inprivate) -->
+<script src="NotificationService.js"></script>
+<script>
+    navigator.serviceWorker.register('sw.js')
+        .then(reg => {
+            console.log('SW registered!', reg);
+            // the browser checks for updates automatically after navigations and functional events, but you can also trigger them manually
+            // setInterval(()=>{
+            //     reg.update();
+            // },60000)
+        })
+        .catch(err => console.log('Boo!', err));
+
+    setTimeout(() => {
+        const img = new Image();
+        img.width = 300;
+        img.src = 'dog.svg';
+        img.style.display = 'block';
+        document.body.appendChild(img);
+    }, 3000);
+</script>
