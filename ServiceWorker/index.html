@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+An image will appear here in 3 seconds (<a href="https://thenounproject.com/term/cat/6725/">cat.svg by Marco Hernandez</a>):
+<script>
+  navigator.serviceWorker.register('sw.js')
+    .then(reg => console.log('SW registered!', reg))
+    .catch(err => console.log('Boo!', err));
+
+  setTimeout(() => {
+    const img = new Image();
+    img.width = 300;
+    img.src = 'dog.svg';
+    img.style.display = 'block';
+    document.body.appendChild(img);
+  }, 3000);
+</script>
