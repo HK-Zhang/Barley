@@ -17,15 +17,19 @@ import {
   fileStats,
   fileReaddir
 } from "./fileSystem";
-import{
-    httpServerStatic,
-    httpClientStatic,
-    httpServerGet,
-    httpClientGet,
-    httpServerPost,
-    httpClientPost,
-    httpServerExternal
+import {
+  httpServerStatic,
+  httpClientStatic,
+  httpServerGet,
+  httpClientGet,
+  httpServerPost,
+  httpClientPost,
+  httpServerExternal
 } from "./httpService";
+import {
+  processInfo,
+  childExec
+} from "./childProcessDemo";
 
 // import simple_timer_demo from './nodeEvent/simple_timer'
 
@@ -74,5 +78,8 @@ import{
 // httpClientPost();
 // httpServerExternal();
 
-sockerServer.socketServerRun();
+// sockerServer.socketServerRun();
 // socketClient.socketClientRun();
+
+// processInfo();
+childExec();
