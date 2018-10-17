@@ -28,7 +28,9 @@ import {
 } from "./httpService";
 import {
   processInfo,
-  childExec
+  childExec,
+  childProcessSpawnFile,
+  childFork
 } from "./childProcessDemo";
 
 // import simple_timer_demo from './nodeEvent/simple_timer'
@@ -82,4 +84,6 @@ import {
 // socketClient.socketClientRun();
 
 // processInfo();
-childExec();
+// childExec();
+// childProcessSpawnFile();
+childFork();
