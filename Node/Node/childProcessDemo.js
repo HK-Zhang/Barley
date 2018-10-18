@@ -109,7 +109,7 @@ exports.childFork = () => {
 
     function sendCommand(child, command) {
         console.log(`Requesting: ${command}`);
-        child.send({ cmd:command });
+        child.send({ cmd: command });
     }
 
     var child1 = makeChild();
@@ -123,4 +123,36 @@ exports.childFork = () => {
     // setTimeout(() => {
     //     console.log("wait");
     // }, 3000);
+}
+
+exports.clusterServer = () => {
+    var cluster = require('cluster');
+    var http = require('http');
+    if (cluster.isMaster) {
+
+        cluster.on('fork', (worker) => {
+            console.log(`Worker ${worker.id} created`);
+        });
+
+        cluster.on('listerning', (worker, address) => {
+            console.log(`Worker ${worker.id} is listening on address.address: ${address.port}`);
+        });
+
+        cluster.on('exit', (worker, code, signal) => {
+            console.log(`Worker ${worker.id} Excited`);
+        })
+
+        cluster.setupMaster({ exec: 'cluster_worker.js' });
+        var numCPUs = require('os').cpus().length;
+        for (let i = 0; i < numCPUs; i++) {
+            if (i >= 4) break;
+            cluster.fork();
+        }
+
+        Object.keys(cluster.workers).forEach((id) => {
+            cluster.workers[id].on('message',(message) => {
+                console.log(message);
+            })
+        });
+    }
 }

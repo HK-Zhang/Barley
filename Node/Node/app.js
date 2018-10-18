@@ -30,7 +30,8 @@ import {
   processInfo,
   childExec,
   childProcessSpawnFile,
-  childFork
+  childFork,
+  clusterServer
 } from "./childProcessDemo";
 
 // import simple_timer_demo from './nodeEvent/simple_timer'
@@ -86,4 +87,5 @@ import {
 // processInfo();
 // childExec();
 // childProcessSpawnFile();
-childFork();
+// childFork();
+clusterServer();
