@@ -21,3 +21,59 @@ exports.buffer_read = () => {
     console.log(bufUTF8.readUInt32BE(18).toString(16));
 
 };
+
+exports.buffer_copy = () => {
+    var alphabet = Buffer.from('abcdefghijklmopqrstuvwxvyz');
+    console.log(alphabet.toString());
+
+    //copy full buffer
+    var blank = Buffer.alloc(26);
+    blank.fill();
+    console.log("Blank:" + blank.toString());
+    alphabet.copy(blank);
+    console.log("Blank:" + blank.toString());
+
+    //copy part of buffer
+    var dashes = Buffer.alloc(26);
+    dashes.fill('-');
+    console.log("Dashes:" + dashes.toString());
+    alphabet.copy(dashes,10,10,15);
+    console.log("Dashes:" + dashes.toString());
+
+    //copy to and from direct index of buffers
+    var dots = Buffer.from('------------------------');
+    dots.fill('.');
+    console.log('dots: ' + dots.toString());
+
+    for (var i = 0; i < dots.length; i++) {
+        if (i % 2) {
+            dots[i] = alphabet[i];
+        }
+    }
+
+    console.log('dots: ' + dots.toString());
+
+};
+
+exports.buffer_slice = () => {
+    var numbers = Buffer.from('123456789');
+    console.log(numbers.toString());
+
+    var slice = numbers.slice(3, 6);
+    console.log(slice.toString());
+
+    slice[0] = '#'.charCodeAt(0);
+    slice[slice.length - 1] = '#'.charCodeAt(0);
+
+    console.log(slice.toString());
+    console.log(numbers.toString());
+
+}
+
+exports.buffer_concat = () => {
+    var af = Buffer.from('African Swallow?');
+    var eu = Buffer.from('European Swallow?');
+    var question = Buffer.from('Air Speed Velocity of an ');
+    console.log(Buffer.concat([question, af]).toString());
+    console.log(Buffer.concat([question, eu]).toString());
+}
