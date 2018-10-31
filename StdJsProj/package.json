@@ -1,0 +1,18 @@
+{
+  "name": "stdjsproj",
+  "version": "1.0.0",
+  "description": "stand project template for javascript",
+  "scripts": {
+    "build": "webpack --config config/webpack.config.js",
+    "dev": "webpack --watch --progress --config config/webpack.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "mousetrap": "^1.6.2"
+  }
+}
