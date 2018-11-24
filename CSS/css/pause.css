@@ -1,0 +1,67 @@
+html, body{
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background: #2c3e50;
+  }
+  
+  .universe{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:500px;
+    width:500px;
+  }
+  
+  .universe div{
+    border-radius: 100%;
+  }
+  
+  .sun {
+    background: #f1c40f;
+    position: absolute;
+    height: 25%;
+    width: 25%;
+    z-index: 2;
+  }
+  
+  .planet {
+    padding: 20px;
+    position: absolute;
+    height: 75%;
+    width: 75%;
+    z-index: 1;
+    animation: rotateEarth 12s infinite
+  }
+  
+  .planet .earth{
+    background: #27ae60;
+    height: 25%;
+    width: 25%;
+    margin: 0 auto;
+  }
+  
+  
+  
+  
+  @keyframes rotateEarth {
+    0% {
+      transform: rotate(0deg)
+    }
+    8.33%, 25% {
+      transform: rotate(90deg)
+    }
+    33.33%, 50% {
+      transform: rotate(180deg)
+    }
+    58.33%, 75% {
+      transform: rotate(270deg)
+    }
+    83.33%, 100% {
+      transform: rotate(360deg)
+    }
+  }
