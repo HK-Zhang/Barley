@@ -9,5 +9,8 @@
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0"
+  },
+  "dependencies": {
+    "json-server": "^0.14.0"
   }
 }

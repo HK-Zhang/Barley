@@ -1,0 +1,26 @@
+{
+    "students": [
+        {
+            "id": 1,
+            "name": "John",
+            "classroomId": 75
+        }
+    ],
+    "courses": [
+        {
+            "id": "history",
+            "studentId": 1
+        },
+        {
+            "id": "algebra",
+            "studentId": 1
+        }
+    ],
+    "history": [
+        {
+            "id": 200,
+            "score": 50,
+            "totalScore": 100
+        }
+    ]
+}
