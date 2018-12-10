@@ -4,6 +4,11 @@
             "id": 1,
             "name": "John",
             "classroomId": 75
+        },
+        {
+            "id": 2,
+            "name": "Lois",
+            "classroomId": 75
         }
     ],
     "courses": [
@@ -14,12 +19,37 @@
         {
             "id": "algebra",
             "studentId": 1
+        },
+        {
+            "id": "history",
+            "studentId": 2
+        },
+        {
+            "id": "algebra",
+            "studentId": 2
         }
     ],
     "history": [
         {
-            "id": 200,
+            "id": 1,
             "score": 50,
+            "totalScore": 100
+        },
+        {
+            "id": 2,
+            "score": 50,
+            "totalScore": 100
+        }
+    ],
+    "algebra": [
+        {
+            "id": 1,
+            "score": 100,
+            "totalScore": 100
+        },
+        {
+            "id": 2,
+            "score": 60,
             "totalScore": 100
         }
     ]
