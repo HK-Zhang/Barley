@@ -168,4 +168,44 @@ TestPromise = () => {
         });
 };
 
-TestPromise();
+TestAsyncAwait = async () =>{
+    var rp = require("request-promise");
+
+    var result = [];
+    var options = {
+        uri: "http://localhost:3000/students",
+        json: true // Automatically parses the JSON string in the response
+    };
+
+    students = await rp(options);
+
+    for (var s of students) {
+        result.push({ id: s.id, name: s.name, average: 0 });
+
+        options.uri = "http://localhost:3000/courses?studentId=" + s.id;
+        courses = await rp(options);
+        
+        s.courseCount = courses.length;
+        s.totalScores = 0;
+
+        for (var c of courses) {
+            options.uri = "http://localhost:3000/" + c.id + "?id=" + s.id;
+            scores = await rp(options);
+
+            scores.forEach(sc => {
+                s.totalScores += sc.score;
+            })
+        }
+    }
+
+    result.forEach(r => {
+        std = students.find(std => std.id == r.id);
+        r.average = std.totalScores / std.courseCount;
+    });
+
+    console.log(JSON.stringify(students));
+    console.log(JSON.stringify(result));
+
+}
+
+TestAsyncAwait();
