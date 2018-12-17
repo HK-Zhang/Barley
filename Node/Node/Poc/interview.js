@@ -208,4 +208,55 @@ TestAsyncAwait = async () =>{
 
 }
 
-TestAsyncAwait();
+TestGenerator = () =>{
+    var co = require('co');
+    var rp = require("request-promise");
+
+    var options = {
+        uri: "http://localhost:3000/students",
+        json: true // Automatically parses the JSON string in the response
+    };
+
+    co(function *(){
+        try {
+          var students = yield rp(options);
+          result = [];
+        //   console.log(students);
+
+          for (var s of students) {
+            result.push({ id: s.id, name: s.name, average: 0 });
+    
+            options.uri = "http://localhost:3000/courses?studentId=" + s.id;
+            courses = yield rp(options);
+            // console.log(courses);
+
+            s.courseCount = courses.length;
+            s.totalScores = 0;
+    
+            for (var c of courses) {
+                options.uri = "http://localhost:3000/" + c.id + "?id=" + s.id;
+                scores = yield rp(options);
+    
+                scores.forEach(sc => {
+                    s.totalScores += sc.score;
+                })
+            }
+        }
+
+        result.forEach(r => {
+            std = students.find(std => std.id == r.id);
+            r.average = std.totalScores / std.courseCount;
+        });
+    
+        // console.log(JSON.stringify(students));
+        console.log(result);
+
+
+        } catch(e) {
+          console.log(e.code) // ENOTFOUND
+       }
+      });
+
+}
+
+TestGenerator();
