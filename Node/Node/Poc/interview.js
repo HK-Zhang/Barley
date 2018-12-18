@@ -259,4 +259,32 @@ TestGenerator = () =>{
 
 }
 
-TestGenerator();
+TestObservable = () => {
+    const { Observable, Subject, ReplaySubject, from, of, range } = require('rxjs');
+    const { map, filter, mergeMap } = require('rxjs/operators');
+    const rp = require("request-promise");
+
+    var options = {
+        uri: "http://localhost:3000/students",
+        json: true // Automatically parses the JSON string in the response
+    };
+
+    const getCourseOfStudent = mergeMap((val) => from(rp(val)));
+
+    const buildCourseOptions = map(x => {
+        return {
+            uri: "http://localhost:3000/courses?studentId=" + x.id,
+            json: true
+        };
+    });
+
+
+    const getCourse = x => from(x).pipe(buildCourseOptions, getCourseOfStudent);
+
+    // from(rp(options)).subscribe(x => getCourse(x).subscribe(t => console.log(t)));
+
+    from(rp(options)).pipe(mergeMap((val) => from(val))).subscribe(t => console.log(t));
+
+}
+
+TestObservable();
