@@ -261,7 +261,7 @@ TestGenerator = () =>{
 
 TestObservable = () => {
     const { Observable, Subject, ReplaySubject, from, of, range } = require('rxjs');
-    const { map, filter, mergeMap } = require('rxjs/operators');
+    const { map, reduce, mergeMap } = require('rxjs/operators');
     const rp = require("request-promise");
 
     var options = {
@@ -269,7 +269,9 @@ TestObservable = () => {
         json: true // Automatically parses the JSON string in the response
     };
 
-    const getCourseOfStudent = mergeMap((val) => from(rp(val)));
+    const listToObservable = mergeMap((val) => from(val));
+
+    const makeHttpRequest = mergeMap((val) => from(rp(val)));
 
     const buildCourseOptions = map(x => {
         return {
@@ -278,12 +280,42 @@ TestObservable = () => {
         };
     });
 
+    const buildScoreOptions = map(x => {
+        return {
+            uri: "http://localhost:3000/" + x.id + "?id=" + x.studentId,
+            json: true
+        };
+    });
 
-    const getCourse = x => from(x).pipe(buildCourseOptions, getCourseOfStudent);
+    const accumulate = reduce((acc, curr) => {
+        if (!Array.isArray(acc)) {
+            result = [];
+            result.push({ id: curr.id, average: curr.score, totalscore: curr.score, count: 1 });
+            acc = result;
+        }
+        rst = acc.find(r => curr.id == r.id);
+        if (rst) {
+            rst.totalscore += curr.score
+            rst.count += 1
+            rst.average = rst.totalscore / rst.count
+        }
+        else {
+            result.push({ id: curr.id, average: curr.score, totalscore: curr.score, count: 1 });
+        }
+        return acc;
+        // console.log(acc)
+        // return 0;
+    });
 
-    // from(rp(options)).subscribe(x => getCourse(x).subscribe(t => console.log(t)));
-
-    from(rp(options)).pipe(mergeMap((val) => from(val))).subscribe(t => console.log(t));
+    from(rp(options)).pipe(
+        listToObservable,
+        buildCourseOptions,
+        makeHttpRequest,
+        listToObservable,
+        buildScoreOptions,
+        makeHttpRequest,
+        listToObservable,
+        accumulate).subscribe(t => console.log(t));
 
 }
 
