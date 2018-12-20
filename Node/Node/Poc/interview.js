@@ -261,7 +261,7 @@ TestGenerator = () =>{
 
 TestObservable = () => {
     const { Observable, Subject, ReplaySubject, from, of, range } = require('rxjs');
-    const { map, reduce, mergeMap } = require('rxjs/operators');
+    const { map, reduce, mergeMap, tap } = require('rxjs/operators');
     const rp = require("request-promise");
 
     var options = {
@@ -272,6 +272,10 @@ TestObservable = () => {
     const listToObservable = mergeMap((val) => from(val));
 
     const makeHttpRequest = mergeMap((val) => from(rp(val)));
+
+    const maptoStudentCourse = (x) => map((v)=>{ return {...v,name: x.find(t => t.id == v.studentId).name}});
+
+    const maptoStudentScore = (x) => map((v)=>{ return {...v,name: x.name}});
 
     const buildCourseOptions = map(x => {
         return {
@@ -290,7 +294,7 @@ TestObservable = () => {
     const accumulate = reduce((acc, curr) => {
         if (!Array.isArray(acc)) {
             result = [];
-            result.push({ id: curr.id, average: curr.score, totalscore: curr.score, count: 1 });
+            result.push({ id: curr.id, name: curr.name, average: curr.score, totalscore: curr.score, count: 1 });
             acc = result;
         }
         rst = acc.find(r => curr.id == r.id);
@@ -300,22 +304,32 @@ TestObservable = () => {
             rst.average = rst.totalscore / rst.count
         }
         else {
-            result.push({ id: curr.id, average: curr.score, totalscore: curr.score, count: 1 });
+            result.push({ id: curr.id, name: curr.name, average: curr.score, totalscore: curr.score, count: 1 });
         }
         return acc;
         // console.log(acc)
         // return 0;
     });
 
-    from(rp(options)).pipe(
-        listToObservable,
+    const getCourseOfStudents = mergeMap((val) => from(val).pipe(
         buildCourseOptions,
         makeHttpRequest,
         listToObservable,
+        maptoStudentCourse(val)
+        ));
+
+    const getScoreOfCourse = mergeMap((val) => of(val).pipe(
         buildScoreOptions,
         makeHttpRequest,
         listToObservable,
-        accumulate).subscribe(t => console.log(t));
+        maptoStudentScore(val)
+    ));
+
+    from(rp(options)).pipe(
+        getCourseOfStudents,
+        getScoreOfCourse,
+        accumulate
+        ).subscribe(t => console.log(t));
 
 }
 
