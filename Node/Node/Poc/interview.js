@@ -292,9 +292,11 @@ TestObservable = () => {
     });
 
     const accumulate = reduce((acc, curr) => {
+        // console.log(acc);
+        // console.log(curr);
         if (!Array.isArray(acc)) {
             result = [];
-            result.push({ id: curr.id, name: curr.name, average: curr.score, totalscore: curr.score, count: 1 });
+            result.push({ id: acc.id, name: acc.name, average: acc.score, totalscore: acc.score, count: 1 });
             acc = result;
         }
         rst = acc.find(r => curr.id == r.id);
