@@ -1,0 +1,21 @@
+{
+  "name": "http2-node-server-push",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "start-advanced": "./node_modules/.bin/node-dev index-advanced.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.14.0",
+    "http2": "^3.3.7",
+    "morgan": "1.7.0",
+    "node-dev": "3.1.1",
+    "spdy": "3.4.0"
+  }
+}
