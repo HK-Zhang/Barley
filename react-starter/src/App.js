@@ -12,6 +12,11 @@ import store from "./store";
 import NavBar from "./components/navbar";
 import Counters from "./components/counters";
 
+// controlled component demo
+import '../node_modules/spectre.css/dist/spectre.min.css';
+import './styles.css';
+import FormContainer from './containers/FormContainer';
+
 class App extends Component {
   state = {
     counters: [
@@ -59,6 +64,7 @@ class App extends Component {
   render() {
     console.log("App - Rendered");
     return (
+      //React Router Demo
       // <Provider store={store}>
       //   <div className="App">
       //     <header className="App-header">
@@ -68,17 +74,29 @@ class App extends Component {
       //     <AuthExample />
       //   </div>
       // </Provider>
-      <React.Fragment>
-        <NavBar totalCounters={this.state.counters.filter(c=> c.value>0).length}/>
-        <main className="container">
-          <Counters
-            counters={this.state.counters}
-            onReset={this.handleReset}
-            onIncrement={this.handleIncrement}
-            onDelete={this.handleDelete}
-          />
-        </main>
-      </React.Fragment>
+
+      //Demo
+      // <React.Fragment>
+      //   <NavBar totalCounters={this.state.counters.filter(c=> c.value>0).length}/>
+      //   <main className="container">
+      //     <Counters
+      //       counters={this.state.counters}
+      //       onReset={this.handleReset}
+      //       onIncrement={this.handleIncrement}
+      //       onDelete={this.handleDelete}
+      //     />
+      //   </main>
+      // </React.Fragment>
+
+      // controlled component demo
+      <div className="container">
+        <div className="columns">
+          <div className="col-md-9 centered">
+            <h3>React.js Controlled Form Components</h3>
+            <FormContainer />
+          </div>
+        </div>
+      </div>
     );
   }
 }
