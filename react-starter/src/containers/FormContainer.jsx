@@ -28,21 +28,21 @@ class FormContainer extends Component {
 		this.handleDescriptionChange = this.handleDescriptionChange.bind(this);
 	}
 	componentDidMount() {
-		// fetch('./fake_db.json')
-		// 	.then(res => res.json())
-		// 	.then(data => {
-		// 		this.setState({
-		// 			ownerName: data.ownerName,
-		// 			petSelections: data.petSelections,
-		// 			selectedPets: data.selectedPets,
-		// 			ageOptions: data.ageOptions,
-		// 			ownerAgeRangeSelection: data.ownerAgeRangeSelection,
-		// 			siblingOptions: data.siblingOptions,
-		// 			siblingSelection: data.siblingSelection,
-		// 			currentPetCount: data.currentPetCount,
-		// 			description: data.description
-		// 		});
-		// 	});
+		fetch('./fake_db.json')
+			.then(res => res.json())
+			.then(data => {
+				this.setState({
+					ownerName: data.ownerName,
+					petSelections: data.petSelections,
+					selectedPets: data.selectedPets,
+					ageOptions: data.ageOptions,
+					ownerAgeRangeSelection: data.ownerAgeRangeSelection,
+					siblingOptions: data.siblingOptions,
+					siblingSelection: data.siblingSelection,
+					currentPetCount: data.currentPetCount,
+					description: data.description
+				});
+			});
 	}
 	handleFullNameChange(e) {
 		this.setState({ ownerName: e.target.value }, () => console.log('name:', this.state.ownerName));
