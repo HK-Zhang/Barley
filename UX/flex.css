@@ -1,0 +1,193 @@
+.box {
+  display: flex;
+}
+
+.box > div {
+  background-color: #003591;
+  border-radius: 0.35rem;
+  margin: 0.1rem;
+  color: white;
+  padding: 0.1rem;
+}
+
+.box2 {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.box2 > div {
+  background-color: #003591;
+  border-radius: 0.35rem;
+  margin: 0.1rem;
+  color: white;
+  padding: 0.1rem;
+}
+
+.box3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box3 > div {
+  background-color: #003591;
+  border-radius: 0.35rem;
+  margin: 0.1rem;
+  color: white;
+  padding: 0.1rem;
+}
+
+.box4 {
+  display: flex;
+}
+.box4 > div {
+  background-color: #003591;
+  border-radius: 0.35rem;
+  margin: 0.1rem;
+  color: white;
+  padding: 0.1rem;
+}
+.one {
+  flex: 1 1 auto;
+}
+
+.two {
+  flex: 1 1 auto;
+}
+
+.three {
+  flex: 1 1 auto;
+}
+
+.box5 {
+  display: flex;
+}
+.box5 > div {
+  background-color: #003591;
+  border-radius: 0.35rem;
+  margin: 0.1rem;
+  color: white;
+  padding: 0.1rem;
+  display: flex;
+  width: 10%
+}
+
+.box6 {
+    display: flex;
+    align-items: center;
+  }
+  .box6 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box7 {
+    display: flex;
+    align-items: stretch;
+  }
+  .box7 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box8 {
+    display: flex;
+    align-items: flex-start;
+  }
+  .box8 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box9 {
+    display: flex;
+    align-items: flex-end;
+  }
+  .box9 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box10 {
+    display: flex;
+    justify-content: center;
+  }
+  .box10 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box11 {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .box11 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box12 {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .box12 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box13 {
+    display: flex;
+    justify-content: space-around;
+  }
+  .box13 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box14 {
+    display: flex;
+    justify-content: space-between;
+  }
+  .box14 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
+  .box15 {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .box15 > div {
+    background-color: #003591;
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+  }
