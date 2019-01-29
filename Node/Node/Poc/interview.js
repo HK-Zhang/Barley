@@ -15,10 +15,24 @@ TestA = () => {
     // [ 1, 2, 3, 4, 5, 1, 4, 9, 16, 25 ]
 
     // It works
-    a.constructor.prototype.multiply = function () {
+    // a.constructor.prototype.multiply = function () {
+    //     this.push(...this.map(t => t * t));
+    // };
+    // [ 1, 2, 3, 4, 5, 1, 4, 9, 16, 25 ]
+
+    // Best solution
+    // multiply = function () {
+    //     this.push(...this.map(t => t * t));
+    // };
+
+    function multiply() {
         this.push(...this.map(t => t * t));
     };
-    // [ 1, 2, 3, 4, 5, 1, 4, 9, 16, 25 ]
+
+    // multiply.bind(a)();
+
+    bind = Function.prototype.call.bind(Function.prototype.bind);
+    bind(multiply,a)();
 
     // It doesn't work
     // a.constructor.prototype.multiply = () =>{
@@ -32,7 +46,7 @@ TestA = () => {
     // }
     // [ 1, 2, 3, 4, 5, 1, 4, 9, 16, 25, multiply: [Function] ]
 
-    a.multiply();
+    // a.multiply();
 
     console.log(a);
 };
@@ -335,4 +349,4 @@ TestObservable = () => {
 
 }
 
-TestObservable();
+TestA();
