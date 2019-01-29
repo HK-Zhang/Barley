@@ -1,0 +1,87 @@
+.cnfont {
+    font-family: 'Microsoft YaHei',Georgia,'Times New Roman',Times,serif;
+}
+
+.enfont {
+    font-family: 'Avenir Next', Avenir, Verdana, sans-serif;
+}
+
+th {
+    font-family: 'Microsoft YaHei',Georgia,'Times New Roman',Times,serif;
+}
+
+.roundborder {
+    border-radius: .35rem;
+    margin: 5px;
+    background-color: white;
+}
+
+tbody[class*="numgrid"] > tr {
+    font-size: .8rem;
+}
+
+.baseline {
+    background-color: hsla(0, 0%, 95%, 1);
+}
+
+.mask {
+    background-color: white;
+    position: absolute;
+    height: 77px;
+    width: 100%;
+    top: 0;
+    left: 0
+}
+
+.logo {
+    position: relative;
+    height: 57px;
+    margin: 10px 0;
+    background-color: white;
+}
+
+div[class*="logo"] > img {
+    position: absolute;
+    /* left: -3946px; */
+    height: 57px;
+}
+
+.board {
+    background-color: #99d6f0;
+    border-radius: .35rem;
+    margin: 5px;
+    height: 100px;
+    display: flex;
+}
+
+div[class*="board"] > div {
+    height: 100%;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+    div[class*="board"] > div > span {
+        color: #003591;
+        font-weight: bold;
+    }
+
+.whiteground {
+    background-color: white;
+}
+
+.qrcontent {
+    min-height: calc(100% - 48px);
+}
+
+.qrfoot {
+    background-color: #333333;
+    height: 32px;
+}
+
+div[class*="qrfoot"] > a {
+    color: white;
+    vertical-align: super;
+    font-size: 16px;
+}
