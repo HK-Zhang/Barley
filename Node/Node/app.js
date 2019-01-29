@@ -33,7 +33,11 @@ import {
   childFork,
   clusterServer
 } from "./childProcessDemo";
-
+import {
+  osInfo,
+  utilInherit,
+  dnsLookup
+} from "./utilDemo";
 // import simple_timer_demo from './nodeEvent/simple_timer'
 
 // console.log(square(11)); // 121
@@ -88,4 +92,8 @@ import {
 // childExec();
 // childProcessSpawnFile();
 // childFork();
-clusterServer();
+// clusterServer();
+
+// osInfo();
+// utilInherit();
+dnsLookup();
