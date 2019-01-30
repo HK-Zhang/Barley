@@ -107,6 +107,22 @@
                 }
             });
 
+            var canvas = document.getElementById("canvas");
+
+            canvas.onclick = function (evt) {
+                var activePoints = window.myHorizontalBar.getElementsAtEvent(evt);
+                if (activePoints[0]) {
+                    var chartData = activePoints[0]['_chart'].config.data;
+                    var idx = activePoints[0]['_index'];
+
+                    var label = chartData.labels[idx];
+                    var value = chartData.datasets[0].data[idx];
+
+                    var url = "http://example.com/?label=" + label + "&value=" + value;
+                    console.log(url);
+                    alert(url);
+                }
+            };
         };
 
         // Define a plugin to provide data labels
@@ -141,6 +157,28 @@
                 });
             }
         });
+
+        // $(document).ready(
+        //     function () {
+        //         var canvas = document.getElementById("canvas");
+
+        //         canvas.onclick = function (evt) {
+        //             var activePoints = myNewChart.getElementsAtEvent(evt);
+        //             if (activePoints[0]) {
+        //                 var chartData = activePoints[0]['_chart'].config.data;
+        //                 var idx = activePoints[0]['_index'];
+
+        //                 var label = chartData.labels[idx];
+        //                 var value = chartData.datasets[0].data[idx];
+
+        //                 var url = "http://example.com/?label=" + label + "&value=" + value;
+        //                 console.log(url);
+        //                 alert(url);
+        //             }
+        //         };
+        //     }
+        // );
+
     </script>
 </body>
 
