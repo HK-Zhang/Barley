@@ -15,16 +15,17 @@
 </head>
 
 <body>
+    <!-- <div style="position:absolute;top:10px;"><button id="backButton">Back</button></div> -->
     <div id="container" style="width: 75%;">
         <canvas id="canvas"></canvas>
     </div>
+
     <script>
-        var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var MONTHS = ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'];
         var color = Chart.helpers.color;
 
-
-        var horizontalBarChartData = {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        var mainChartData = {
+            labels: ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'],
             datasets: [{
                 label: 'New 5m production line',
                 backgroundColor: color('#99d6f0').alpha(1).rgbString(),
@@ -66,6 +67,9 @@
 
         };
 
+        var horizontalBarChartData = { labels: [], datasets: [] };
+        horizontalBarChartData.labels = mainChartData.labels;
+        horizontalBarChartData.datasets = mainChartData.datasets;
 
         window.onload = function () {
             var ctx = document.getElementById('canvas').getContext('2d');
@@ -107,6 +111,33 @@
                 }
             });
 
+            var canvas = document.getElementById("canvas");
+
+            canvas.onclick = function (evt) {
+                var activePoints = window.myHorizontalBar.getElementsAtEvent(evt);
+                if (activePoints[0]) {
+                    var chartData = activePoints[0]['_chart'].config.data;
+                    var idx = activePoints[0]['_index'];
+
+                    var label = chartData.labels[idx];
+                    var value = chartData.datasets[0].data[idx];
+
+                    var url = "http://example.com/?label=" + label + "&value=" + value;
+                    // console.log(url);
+                    // alert(url);
+
+                    if (!isNaN(parseFloat(label)))
+                        reloadChartData(label);
+                } else {
+                    if (evt.offsetY >= 65) {
+                        horizontalBarChartData.labels = mainChartData.labels;
+                        horizontalBarChartData.datasets = mainChartData.datasets;
+                        window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
+                        window.myHorizontalBar.update();
+                    }
+
+                }
+            };
         };
 
         // Define a plugin to provide data labels
@@ -141,6 +172,69 @@
                 });
             }
         });
+
+        function reloadChartData(label) {
+
+            horizontalBarChartData.labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+            horizontalBarChartData.datasets = [{
+                label: 'New 5m production line',
+                backgroundColor: color('#99d6f0').alpha(1).rgbString(),
+                borderColor: '#99d6f0',
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Original production line',
+                backgroundColor: color('#003591').alpha(1).rgbString(),
+                borderColor: '#003591',
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }];
+            window.myHorizontalBar.options.title.text = "Certificated tonnage per Month of " + label;
+            window.myHorizontalBar.update();
+        }
+
+        // document.getElementById('backButton').addEventListener('click', function () {
+        //     horizontalBarChartData.labels = mainChartData.labels;
+        //     horizontalBarChartData.datasets = mainChartData.datasets;
+        //     window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
+        //     window.myHorizontalBar.update();
+
+        // });
+
+        // $(document).ready(
+        //     function () {
+        //         var canvas = document.getElementById("canvas");
+
+        //         canvas.onclick = function (evt) {
+        //             var activePoints = myNewChart.getElementsAtEvent(evt);
+        //             if (activePoints[0]) {
+        //                 var chartData = activePoints[0]['_chart'].config.data;
+        //                 var idx = activePoints[0]['_index'];
+
+        //                 var label = chartData.labels[idx];
+        //                 var value = chartData.datasets[0].data[idx];
+
+        //                 var url = "http://example.com/?label=" + label + "&value=" + value;
+        //                 console.log(url);
+        //                 alert(url);
+        //             }
+        //         };
+        //     }
+        // );
+
     </script>
 </body>
 
