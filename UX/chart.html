@@ -129,10 +129,13 @@
                     if (!isNaN(parseFloat(label)))
                         reloadChartData(label);
                 } else {
-                    horizontalBarChartData.labels = mainChartData.labels;
-                    horizontalBarChartData.datasets = mainChartData.datasets;
-                    window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
-                    window.myHorizontalBar.update();
+                    if (evt.offsetY >= 65) {
+                        horizontalBarChartData.labels = mainChartData.labels;
+                        horizontalBarChartData.datasets = mainChartData.datasets;
+                        window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
+                        window.myHorizontalBar.update();
+                    }
+
                 }
             };
         };
@@ -203,13 +206,13 @@
             window.myHorizontalBar.update();
         }
 
-        document.getElementById('backButton').addEventListener('click', function () {
-            horizontalBarChartData.labels = mainChartData.labels;
-            horizontalBarChartData.datasets = mainChartData.datasets;
-            window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
-            window.myHorizontalBar.update();
+        // document.getElementById('backButton').addEventListener('click', function () {
+        //     horizontalBarChartData.labels = mainChartData.labels;
+        //     horizontalBarChartData.datasets = mainChartData.datasets;
+        //     window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
+        //     window.myHorizontalBar.update();
 
-        });
+        // });
 
         // $(document).ready(
         //     function () {
