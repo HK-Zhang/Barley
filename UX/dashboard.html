@@ -1,0 +1,334 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="flex.css" />
+    <script src="Chart.min.js"></script>
+    <script src="utils.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box16">
+        <div class="one"><canvas id="canvas"></canvas></div>
+        <div class="one"><canvas id="canvas2"></canvas></div>
+        <div class="one"><canvas id="canvas3"></canvas></div>
+        <div class="one"><canvas id="canvas4"></canvas></div>
+    </div>
+    <!-- <div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+    </div> -->
+
+    <script>
+        var MONTHS = ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+        var color = Chart.helpers.color;
+
+        var mainChartData = {
+            labels: ['2001', '2002', '2003', '2004', '2005', '2006', '2007', '2008', '2009', '2010', '2011', '2012'],
+            datasets: [{
+                label: 'New 5m production line',
+                backgroundColor: color('#99d6f0').alpha(1).rgbString(),
+                borderColor: '#99d6f0',
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Original production line',
+                backgroundColor: color('#003591').alpha(1).rgbString(),
+                borderColor: '#003591',
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }]
+
+        };
+
+        var horizontalBarChartData = { labels: [], datasets: [] };
+        horizontalBarChartData.labels = mainChartData.labels;
+        horizontalBarChartData.datasets = mainChartData.datasets;
+
+        window.onload = function () {
+            var ctx = document.getElementById('canvas').getContext('2d');
+            var ctx2 = document.getElementById('canvas2').getContext('2d');
+            var ctx3 = document.getElementById('canvas3').getContext('2d');
+            var ctx4 = document.getElementById('canvas4').getContext('2d');
+            window.myHorizontalBar = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Certificated tonnage per YEAR'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 350
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+                    }
+                }
+            });
+
+            window.myHorizontalBar2 = new Chart(ctx2, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Certificated tonnage per YEAR'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 350
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+                    }
+                }
+            });
+
+            window.myHorizontalBar3 = new Chart(ctx3, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Certificated tonnage per YEAR'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 350
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+                    }
+                }
+            });
+
+            window.myHorizontalBar4 = new Chart(ctx4, {
+                type: 'horizontalBar',
+                data: horizontalBarChartData,
+                options: {
+                    // Elements options apply to all of the options unless overridden in a dataset
+                    // In this case, we are setting the border of each horizontal bar to be 2px wide
+                    elements: {
+                        rectangle: {
+                            borderWidth: 2,
+                        }
+                    },
+                    responsive: true,
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Certificated tonnage per YEAR'
+                    },
+                    scales: {
+                        xAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 350
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                display: false
+                            }
+                        }]
+                    }
+                }
+            });
+            var canvas = document.getElementById("canvas");
+
+            canvas.onclick = function (evt) {
+                var activePoints = window.myHorizontalBar.getElementsAtEvent(evt);
+                if (activePoints[0]) {
+                    var chartData = activePoints[0]['_chart'].config.data;
+                    var idx = activePoints[0]['_index'];
+
+                    var label = chartData.labels[idx];
+                    var value = chartData.datasets[0].data[idx];
+
+                    var url = "http://example.com/?label=" + label + "&value=" + value;
+                    // console.log(url);
+                    // alert(url);
+
+                    if (!isNaN(parseFloat(label)))
+                        reloadChartData(label);
+                } else {
+                    if (evt.offsetY >= 65) {
+                        horizontalBarChartData.labels = mainChartData.labels;
+                        horizontalBarChartData.datasets = mainChartData.datasets;
+                        window.myHorizontalBar.options.title.text = "Certificated tonnage per Year";
+                        window.myHorizontalBar.update();
+                    }
+
+                }
+            };
+        };
+
+        // Define a plugin to provide data labels
+        Chart.plugins.register({
+            afterDatasetsDraw: function (chart) {
+                var ctx = chart.ctx;
+
+                chart.data.datasets.forEach(function (dataset, i) {
+                    var meta = chart.getDatasetMeta(i);
+                    if (!meta.hidden) {
+                        meta.data.forEach(function (element, index) {
+                            // Draw the text in black, with the specified font
+                            ctx.fillStyle = 'rgb(0, 0, 0)';
+
+                            var fontSize = 14;
+                            var fontStyle = 'normal';
+                            var fontFamily = 'Helvetica Neue';
+                            ctx.font = Chart.helpers.fontString(fontSize, fontStyle, fontFamily);
+
+                            // Just naively convert to string for now
+                            var dataString = dataset.data[index].toString();
+
+                            // Make sure alignment settings are correct
+                            ctx.textAlign = 'left';
+                            ctx.textBaseline = 'top';
+
+                            var padding = 5;
+                            var position = element.tooltipPosition();
+                            ctx.fillText(dataString, position.x + padding, position.y - (fontSize / 2));
+                        });
+                    }
+                });
+            }
+        });
+
+        function reloadChartData(label) {
+
+            horizontalBarChartData.labels = ['January', 'February', 'March', 'April', 'May', 'June'];
+            horizontalBarChartData.datasets = [{
+                label: 'New 5m production line',
+                backgroundColor: color('#99d6f0').alpha(1).rgbString(),
+                borderColor: '#99d6f0',
+                borderWidth: 1,
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }, {
+                label: 'Original production line',
+                backgroundColor: color('#003591').alpha(1).rgbString(),
+                borderColor: '#003591',
+                data: [
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor(),
+                    randomScalingFactor()
+                ]
+            }];
+            window.myHorizontalBar.options.title.text = "Certificated tonnage per Month of " + label;
+            window.myHorizontalBar.update();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -191,3 +191,15 @@
     padding: 0.1rem;
     display: flex;
   }
+  .box16 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box16 > div {
+    border-radius: 0.35rem;
+    margin: 0.1rem;
+    color: white;
+    padding: 0.1rem;
+    display: flex;
+    width: 40%
+  }
