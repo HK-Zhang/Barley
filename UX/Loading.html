@@ -1,0 +1,87 @@
+﻿<html>
+
+<head>
+  <title> favorites / bookmark title goes here </title>
+
+  <style>
+    .vui-spinner {
+      padding: 15px 2px 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -100px;
+      margin-left: -100px;
+      padding: 15px 2px 3px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .vui-spinner .vui-spinner-fragment--sea {
+      animation-duration: 0.75s;
+      display: block;
+      animation-name: vui-spinner-animation-sea;
+    }
+
+    .vui-spinner-fragment {
+      position: absolute;
+      border-radius: 50%;
+      display: none;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear;
+      width: 160px;
+      height: 160px;
+      transform-origin: 80px 81.5px 0px;
+      left: 30px;
+      top: 30px;
+      box-shadow: rgb(0, 53, 145) 0px 3px 0px 0px;
+    }
+
+    .vui-spinner-fragment--sea {
+      animation-duration: 0.75s;
+    }
+
+    .vui-spinner-container {
+      width: 220px;
+      height: 220px;
+      position: relative;
+    }
+
+    .spinner {
+      width: 100%;
+      height: 100%;
+    }
+
+    .main-wrapper {
+      min-height: 50em;
+      box-sizing: border-box;
+      color: #002a3e;
+    }
+
+    @keyframes vui-spinner-animation-sea {
+      0% {
+        transform: rotate(240deg);
+      }
+
+      100% {
+        transform: rotate(600deg);
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1> My first page </h1>
+
+  This is my first web page and I can say anything I want in here - I do that by putting text or images in the body
+  section - where I'm typing right now :)
+
+  <div class="main-wrapper"><div class="spinner"><div class="vui-spinner " data-speed="medium" data-air="false" data-sea="true" data-land="false"><div class="vui-spinner-container"><div class="vui-spinner-fragment vui-spinner-fragment--sea"></div></div></div></div></div>
+</body>
+
+</html>
