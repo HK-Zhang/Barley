@@ -1,0 +1,54 @@
+{
+  "name": "typescriptfullstackshell",
+  "version": "1.0.0",
+  "description": "demonstrate how to do full-stack TypeScript development",
+  "main": "src/start.js",
+  "scripts": {
+    "start": "npm install --only=prod && node ./build/demo.bundle.js",
+    "start:express": "nodemon --config \"./util/nodemon.json\"/",
+    "start:react": "cd ./src/public/react/demo-react/ && npm start",
+    "test": "ts-node ./src/start.ts test",
+    "build": "sh ./util/buildForProd.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanpmaxwell/TypeScriptFullStackShell.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Express",
+    "React",
+    "FullStack",
+    "Professional",
+    "Enterprise",
+    "Startup"
+  ],
+  "author": "Sean Maxwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanpmaxwell/TypeScriptFullStackShell/issues"
+  },
+  "homepage": "https://github.com/seanpmaxwell/TypeScriptFullStackShell#readme",
+  "dependencies": {
+    "@overnightjs/core": "^1.4.1",
+    "express": "^4.16.4",
+    "simple-color-print": "^1.0.5"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/jasmine": "^3.3.7",
+    "@types/node": "^10.12.18",
+    "@types/supertest": "^2.0.7",
+    "jasmine": "^3.3.1",
+    "nodemon": "^1.18.10",
+    "supertest": "^3.4.1",
+    "ts-node": "^8.0.2",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.4",
+    "webpack": "4.19.1",
+    "webpack-cli": "^3.2.1",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
