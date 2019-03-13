@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;height:100%">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://onedesign.azureedge.net/onedesigncdn/2.0.0/oneDesign.css" />
+    <link rel="stylesheet" href="flex.css" />
+    <script defer="defer"
+        src="https://onedesign.azureedge.net/onedesigncdn/2.0.0-rc.3/js/fontawesome-all.min.js"></script>
+</head>
+
+<body style="max-width:1440px;margin:auto;">
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light navbar-dnvgl" style="padding-left:0px">
+
+            <a href="#" class="logonavbar-brand mr-5 mb-2">
+                <img class="logo-image" style="height:46px;" src="Logo-Standard-RGB.svg" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between align-items-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                </ul>
+
+                <div class="navbar-dnvgl-iconbar d-flex">
+                    <span class="site-title">VCS <span class="px-2">|</span></span>
+                    <ul class="navbar-nav navbar-dnvgl-iconbar flex-row mr-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fal fa-user-alt"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="dropdown-heading">Your profile</div>
+                                <div class="user-name">Cathrine Johansen</div>
+                                <hr role="separator" />
+                                <div class="dropdown-heading">Manage account</div>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pr-2"><i class="fal fa-question-circle"></i></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    <main style="width: 100%;max-width:1440px;">
+        <div class="block block-framed">
+            <h2>Project number: 10119131</h2>
+            <p>Project related information show here</p>
+        </div>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered" style="padding: 10px 29px;">
+                    <div>
+                        <i class="fal fa-file-alt" style="margin-left:-29px;width:29px;font-size: 25px"></i>
+                        <h2 style="display:inline;">Documentation from customer</h2>
+                        <button class="btn btn-flat" style="float:right;" onclick="demoliste()" id="lstbtne"><i
+                                class="fal fa-expand-alt"></i></button>
+                        <button class="btn btn-flat" style="float:right;display: none;" onclick="demoliste()"
+                            id="lstbtnc"><i class="fal fa-compress-alt"></i></button>
+                    </div>
+                    <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst1">
+                        <h2>List of reports</h2>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Document No.</th>
+                                    <th>Revision</th>
+                                    <th>Title</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GW-07SS.0923</td>
+                                    <td>C</td>
+                                    <td>Loads Report for GW 121/2500 (IEC S, LM58.8 blade, 90m Hub Height, LAC)</td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>GW-07SS.0924</td>
+                                    <td>C</td>
+                                    <td>Loads Report for GW 121/2500 (IEC S, LM58.8 blade, 90m Hub Height, LAC)</td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>GW-07SS.0956</td>
+                                    <td>B</td>
+                                    <td>Loads Report for GW 121/2500 (IEC S, LM58.8 blade, 90m Hub Height, LAC)</td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>GW-07SS.0957</td>
+                                    <td>A</td>
+                                    <td>Loads Report for GW 121/2500 (IEC S, LM58.8 blade, 90m Hub Height, LAC)</td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst2">
+                        <h2>List of drawings</h2>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Document No.</th>
+                                    <th>Revision</th>
+                                    <th>Title</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>60.00.00103</td>
+                                    <td>-</td>
+                                    <td>90m Tower (4 sections) 121-IIIB/109-IIA 2.5MW</td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst3">
+                        <h2>List of specifications/manuals/instructions</h2>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Document No.</th>
+                                    <th>Revision</th>
+                                    <th>Title</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst4">
+                        <h2>List of documents taken for information only</h2>
+                        <table class="table table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Document No.</th>
+                                    <th>Revision</th>
+                                    <th>Title</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>GW-07FA.0233</td>
+                                    <td>A.3</td>
+                                    <td>Control Strategy Specification for GW 121/2500 （IEC S, LM58.8 blade, 90m Hub
+                                        Height)
+                                    </td>
+                                    <td><i class="fal fa-trash-alt"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div class="row" style="width: 100%;float: left;">
+                <div class="col-md-3">
+                    <div class="block bg-sky-blue-lightest">
+                        <h2>Filter by Status</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">O</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">C</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">CN</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="block bg-land-green-lightest">
+                        <h2>Filter by Category</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">NC</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">TQ</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">A</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="block bg-cyan-lightest">
+                        <h2>Filter by Item</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Tower</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Node</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Turbin</label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="block bg-neutral-10">
+                        <h2>Filter by Priority</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio4">!High Importance</label></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;" id="section1o">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">Technology Qualification</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo1o()"><i
+                            class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                    <label style="float:right;margin:3px;">Goldwind,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section id="section1d" style="display:none;">
+            <div class="block block-bordered"
+                style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+            </div>
+            <div style="width: calc(100% - 120px);float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest"
+                    style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                    <h3 style="display:inline;">DNV GL, 2018-09-14</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo1d()"><i
+                            class="fal fa-compress-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">Open</label>
+                    <label class="badge badge-info" style="float:right;">Non-Conformance</label>
+                </div>
+                <div class="block block-bordered">
+                    <h2>Technology Qualification</h2>
+                    <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and test your application locally, without creating an Azure subscription or incurring any costs. When you're satisfied with how your application is working in the Azure Cosmos DB Emulator, you can switch to using an Azure Cosmos DB account in the cloud.</p>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;padding:25px;">
+                    <i class="fal fa-user-alt" style="font-size:50px;"></i>
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>Goldwind，2018-10-22</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and test your application locally, without creating an Azure subscription or incurring any costs. When you're satisfied with how your application is working in the Azure Cosmos DB Emulator, you can switch to using an Azure Cosmos DB account in the cloud.
+                        </p>
+                        <div class="block block-transparent" style="padding:0px;">
+                            <h3>Attachments:</h3>
+                            <ul>
+                                <li><a href="#">90m Tower (4 sections) 121-IIIB/109-IIA 2.5MW.pdf</a><button
+                                        class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;" onclick="showDialog()"><i
+                                            class="fal fa-plus"></i>Add to list</button></li>
+                                <li><a href="#">The Updated Loads Comparison of GW 121_2500 (90m Hub Height, IEC S,
+                                        LM58.8 blade, LAC).pdf</a><button class="btn btn-subtle"
+                                        style="height:25px;padding:0px 12px;margin-left:5px;"><i
+                                            class="fal fa-info-circle"></i>Info</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>DNV GL, 2018-11-14</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not fully supported.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;padding:25px;">
+                    <i class="fal fa-user-alt" style="font-size:50px;"></i>
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>Goldwind，2018-12-05</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not fully supported.</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 120px;min-height: 100px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered">
+                        <textarea style="width:100%;min-height: 200px;" placeholder="Leave a comment"></textarea>
+                        <ul style="display: flex;list-style-type: none;float:left;padding-left: 0px;">
+                            <li style="padding-right:20px;"><button class="btn btn-primary">Close with
+                                    Note/Condition</button></li>
+                            <li style="padding-right:20px;"><button class="btn btn-cta">Close</button></li>
+                        </ul>
+                        <ul style="display: flex;list-style-type: none;float:right;">
+                            <li style="padding-left:20px;"><button class="btn btn-secondary">Add Attachments</button>
+                            </li>
+                            <li style="padding-left:20px;"><button class="btn btn-primary">Save</button></li>
+                            <li style="padding-left:20px;"><button class="btn btn-cta">Publish</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;" id="section2o">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;"> DRC or BLC in DLC1.2</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo2o()"><i
+                            class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                    <label style="float:right;margin:3px;">DNVGL,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;display: none;" id="section2d">
+            <div class="block block-bordered"
+                style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+            </div>
+            <div style="width: calc(100% - 120px);float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest"
+                    style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                    <h3 style="display:inline;">DNV GL, 2018-09-14</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo2d()"><i
+                            class="fal fa-compress-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                </div>
+                <div class="block block-bordered">
+                    <h2>DRC or BLC in DLC1.2</h2>
+                    <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is different than the service. For example, the emulator uses standard OS components such as the local file system for persistence, and the HTTPS protocol stack for connectivity. Functionality that relies on Azure infrastructure like global replication, single-digit millisecond latency for reads/writes, and tunable consistency levels are unavailable.</p>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;padding:25px;">
+                    <i class="fal fa-user-alt" style="font-size:50px;"></i>
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>Goldwind，2018-10-22</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is different than the service. For example, the emulator uses standard OS components such as the local file system for persistence, and the HTTPS protocol stack for connectivity. Functionality that relies on Azure infrastructure like global replication, single-digit millisecond latency for reads/writes, and tunable consistency levels are unavailable.
+                        </p>
+                        <div class="block block-transparent" style="padding:0px;">
+                            <h3>Attachments:</h3>
+                            <ul>
+                                <li><a href="#">90m Tower (4 sections) 121-IIIB/109-IIA 2.5MW.pdf</a></li>
+                                <li><a href="#">The Updated Loads Comparison of GW 121_2500 (90m Hub Height, IEC S,
+                                        LM58.8 blade, LAC).pdf</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>DNV GL, 2018-11-14</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>Because the Azure Cosmos DB Emulator provides an emulated environment running on a local developer workstation, there are some differences in functionality between the emulator and an Azure Cosmos DB account in the cloud</p>
+                    </div>
+                </div>
+            </div>
+            <div style="margin-left: 120px;">
+                <div class="block block-bordered"
+                    style="width:100px;height: 100px;float: left;margin-right: 20px;padding:25px;">
+                    <i class="fal fa-user-alt" style="font-size:50px;"></i>
+                </div>
+                <div style="width: calc(100% - 120px);float: left;">
+                    <div class="block block-bordered bg-neutral-10"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3>Goldwind，2018-12-05</h3>
+                    </div>
+                    <div class="block block-bordered">
+                        <p>The Azure Cosmos DB Emulator has the following hardware and software requirements</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">DLC1.3</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                    <label style="float:right;margin:3px;">DNVGL,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">LAC and failure cases</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">TQ</label>
+                    <label style="float:right;margin:3px;">DNVGL,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <i class="fal fa-exclamation-circle danger"
+                        style="margin-left:-29px;width:29px;font-size: 20px"></i>
+                    <h3 style="display:inline;">BLC</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-success" style="float:right;">C</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                    <label style="float:right;margin:3px;">Goldwind,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">Lidar failure load cases</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">TQ</label>
+                    <label style="float:right;margin:3px;">Goldwind,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">Deterministic gusts versus deterministic gust embedded into turbulent
+                        wind</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-secondary" style="float:right;">CN</label>
+                    <label class="badge badge-info" style="float:right;">A</label>
+                    <label style="float:right;margin:3px;">DNVGL,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">DLC2.4 (Mode1/2)</h3>
+                    <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-warning" style="float:right;">O</label>
+                    <label class="badge badge-info" style="float:right;">NC</label>
+                    <label style="float:right;margin:3px;">DNVGL,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;display: none;" id="section3o">
+            <div style="width: 100%;float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                    Hello World
+                    <button class="btn btn-flat" style="float:right;" onclick="demo3o()"><i
+                            class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-danger" style="float:right;">Waiting Approval</label>
+                    <label class="badge badge-info" style="float:right;">Non-Conformance</label>
+                    <label style="float:right;margin:3px;">Goldwind,2018-12-05</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;display: none;" id="section3d">
+            <div class="block block-bordered"
+                style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+            </div>
+            <div style="width: calc(100% - 120px);float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest"
+                    style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                    <h3 style="display:inline;">DNV GL, 2018-09-14</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo3d()"><i
+                            class="fal fa-compress-alt"></i></button>
+                    <label class="badge badge-danger" style="float:right;">Waiting Approval</label>
+                    <label class="badge badge-info" style="float:right;">Non-Conformance</label>
+                </div>
+                <div class="block block-bordered">
+                    <h2>Hello World</h2>
+                    <p>When the Azure Cosmos DB Emulator launches, it automatically opens the Azure Cosmos DB Data Explorer in your browser. The address appears as https://localhost:8081/_explorer/index.html. If you close the explorer and would like to reopen it later, you can either open the URL in your browser or launch it from the Azure Cosmos DB Emulator in the Windows Tray Icon as shown below.</p>
+                    <ul style="display: flex;list-style-type: none;float:right;">
+                        <li style="padding-left:20px;"><button class="btn btn-cta">Approve</button></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;">
+            <div class="block block-bordered"
+                style="width:100px;height: 100px;float: left;margin-right: 20px;background-image: url('logo.png'); background-repeat: no-repeat;background-position: center;">
+            </div>
+            <div style="width: calc(100% - 120px);float: left;">
+                <div class="block block-bordered bg-sky-blue-lightest"
+                    style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                    <h3>Create a new comment</h3>
+                </div>
+                <div class="block block-bordered">
+                    <input type="text" id="inputName" class="form-control" style="margin-bottom:10px;"
+                        placeholder="Type Subject" />
+                    <div class="custom-control custom-radio" style="padding-left:30px">
+                        <ul style="display: flex;list-style-type: none;padding-left:0px">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Non-Conformance</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Technical Query</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Editorial/Advice/For Info</label>
+                            </li>
+                            <li style="padding-right:40px;"><button class="btn btn-subtle"
+                                    style="padding:0px;height:20px;width:20px;"><i class="fal fa-plus"></i></button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="custom-control custom-radio" style="padding-left:30px">
+                        <ul style="display: flex;list-style-type: none;padding-left:0px">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Tower</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Node</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Turbin</label>
+                            </li>
+                            <li style="display:inherit;"><input type="text" id="inputName" class="form-control"
+                                    style="padding:0px 6px;height:30px;margin-right: 1px;" /><button
+                                    class="btn btn-secondary" style="height:30px;padding:0px;">Add</button></li>
+                        </ul>
+                    </div>
+                    <textarea style="width:100%;min-height: 200px;" placeholder="Leave a comment"></textarea>
+                    <ul style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 30px;">
+                        <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
+                                class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio4">!High Importance</label></li>
+                        <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
+                                class="custom-control-input">
+                            <label class="custom-control-label" for="customRadio4">Receive email on Updated</label></li>
+                    </ul>
+                    <ul style="display: flex;list-style-type: none;float:right;">
+                        <li style="padding-left:20px;"><button class="btn btn-secondary">Add Attachments</button></li>
+                        <li style="padding-left:20px;"><button class="btn btn-primary">Save</button></li>
+                        <li style="padding-left:20px;"><button class="btn btn-cta" onclick="demo4()">Publish</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Modal -->
+    <div class="modal-dialog" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document" id="modal1">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Add to Document List</h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="inputName">Title</label>
+                    <input type="text" id="inputName" class="form-control" />
+                    <label for="exampleSelect">Document Type</label>
+                    <select id="exampleSelect" class="form-control">
+                        <option>report</option>
+                        <option>drawing</option>
+                        <option>specifications/manuals/instructions</option>
+                        <option>documents taken for information only</option>
+                    </select>
+                    <ul style="display: flex;list-style-type: none;padding: 0px">
+                        <li style="padding-right:70px;"><label for="inputName">Document No.</label>
+                            <input type="text" id="inputName" class="form-control" /></li>
+                        <li><label for="inputName">Revision</label>
+                            <input type="text" id="inputName" class="form-control" /></li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-subtle" data-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <footer>
+
+    </footer> -->
+    <script>
+        function demo1o() {
+            document.getElementById("section1d").style.display = "block";
+            document.getElementById("section1o").style.display = "none";
+        }
+
+        function demo1d() {
+            document.getElementById("section1o").style.display = "block";
+            document.getElementById("section1d").style.display = "none";
+        }
+
+        function demo2o() {
+            document.getElementById("section2d").style.display = "block";
+            document.getElementById("section2o").style.display = "none";
+        }
+
+        function demo2d() {
+            document.getElementById("section2o").style.display = "block";
+            document.getElementById("section2d").style.display = "none";
+        }
+
+        function demo3o() {
+            document.getElementById("section3d").style.display = "block";
+            document.getElementById("section3o").style.display = "none";
+        }
+
+        function demo3d() {
+            document.getElementById("section3o").style.display = "block";
+            document.getElementById("section3d").style.display = "none";
+        }
+
+        function demo4() {
+            document.getElementById("section3o").style.display = "block";
+        }
+
+        function demoliste() {
+            if (document.getElementById("lst1").style.display == "none") {
+                document.getElementById("lst1").style.display = "block";
+                document.getElementById("lst2").style.display = "block";
+                document.getElementById("lst3").style.display = "block";
+                document.getElementById("lst4").style.display = "block";
+                document.getElementById("lstbtne").style.display = "none";
+                document.getElementById("lstbtnc").style.display = "block";
+            } else {
+                document.getElementById("lst1").style.display = "none";
+                document.getElementById("lst2").style.display = "none";
+                document.getElementById("lst3").style.display = "none";
+                document.getElementById("lst4").style.display = "none";
+                document.getElementById("lstbtne").style.display = "block";
+                document.getElementById("lstbtnc").style.display = "none";
+
+            }
+
+        }
+
+        function showDialog() {
+            document.getElementById("modal1").style.position = "absolute";
+        }
+
+    </script>
+</body>
+
+</html>
