@@ -27,7 +27,7 @@
                 </ul>
 
                 <div class="navbar-dnvgl-iconbar d-flex">
-                    <span class="site-title">VCS <span class="px-2">|</span></span>
+                    <span class="site-title">Online VCS <span class="px-2">|</span></span>
                     <ul class="navbar-nav navbar-dnvgl-iconbar flex-row mr-lg-0">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink"
@@ -167,7 +167,7 @@
             </div>
         </section>
         <section style="width:100%;">
-            <div class="row" style="width: 100%;float: left;">
+            <div class="row" style="width: 100%;float: left;display: flex;justify-content:space-between;">
                 <div class="col-md-3">
                     <div class="block bg-sky-blue-lightest">
                         <h2>Filter by Status</h2>
@@ -214,7 +214,7 @@
                                 <label class="custom-control-label" for="customRadio1">Tower</label></li>
                             <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
                                     class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Node</label></li>
+                                <label class="custom-control-label" for="customRadio2">Loads</label></li>
                             <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
                                     class="custom-control-input">
                                 <label class="custom-control-label" for="customRadio3">Turbin</label>
@@ -237,14 +237,17 @@
         </section>
         <section style="width:100%;" id="section1o">
             <div style="width: 100%;float: left;">
-                <div class="block block-bordered bg-sky-blue-lightest" style="padding: 10px 29px;">
+                <div class="block block-bordered bg-sky-blue-lightest"
+                    style="padding: 10px 29px 0px 29px;display:flex;justify-content:space-between;">
                     <h3 style="display:inline;">Technology Qualification</h3>
-                    <button class="btn btn-flat" style="float:right;" onclick="demo1o()"><i
-                            class="fal fa-expand-alt"></i></button>
-                    <label class="badge badge-warning" style="float:right;">O</label>
-                    <label class="badge badge-info" style="float:right;">NC</label>
-                    <label class="badge badge-dark" style="float:right;">Tower</label>
-                    <label style="float:right;margin:3px;"><i class="fal fa-reply"></i>Goldwind,2018-12-05</label>
+                    <ul style="list-style-type: none;display: flex;">
+                        <li><label style="margin:3px;"><i class="fal fa-reply"></i>Goldwind,2018-12-05</label></li>
+                        <li><label class="badge badge-dark">Tower</label></li>
+                        <li><label class="badge badge-info">NC</label></li>
+                        <li><label class="badge badge-warning">O</label></li>
+                        <li><button class="btn btn-flat" onclick="demo1o()"><i class="fal fa-expand-alt"></i></button>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -264,7 +267,11 @@
                 </div>
                 <div class="block block-bordered">
                     <h2>Technology Qualification</h2>
-                    <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and test your application locally, without creating an Azure subscription or incurring any costs. When you're satisfied with how your application is working in the Azure Cosmos DB Emulator, you can switch to using an Azure Cosmos DB account in the cloud.</p>
+                    <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB
+                        service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and test
+                        your application locally, without creating an Azure subscription or incurring any costs. When
+                        you're satisfied with how your application is working in the Azure Cosmos DB Emulator, you can
+                        switch to using an Azure Cosmos DB account in the cloud.</p>
                 </div>
             </div>
             <div style="margin-left: 120px;">
@@ -278,14 +285,18 @@
                         <h3>Goldwind，2018-10-22</h3>
                     </div>
                     <div class="block block-bordered">
-                        <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and test your application locally, without creating an Azure subscription or incurring any costs. When you're satisfied with how your application is working in the Azure Cosmos DB Emulator, you can switch to using an Azure Cosmos DB account in the cloud.
+                        <p>The Azure Cosmos DB Emulator provides a local environment that emulates the Azure Cosmos DB
+                            service for development purposes. Using the Azure Cosmos DB Emulator, you can develop and
+                            test your application locally, without creating an Azure subscription or incurring any
+                            costs. When you're satisfied with how your application is working in the Azure Cosmos DB
+                            Emulator, you can switch to using an Azure Cosmos DB account in the cloud.
                         </p>
                         <div class="block block-transparent" style="padding:0px;">
                             <h3>Attachments:</h3>
                             <ul>
                                 <li><a href="#">90m Tower (4 sections) 121-IIIB/109-IIA 2.5MW.pdf</a><button
-                                        class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;" onclick="showDialog()"><i
-                                            class="fal fa-plus"></i>Add to list</button></li>
+                                        class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;"
+                                        onclick="showDialog()"><i class="fal fa-plus"></i>Add to list</button></li>
                                 <li><a href="#">The Updated Loads Comparison of GW 121_2500 (90m Hub Height, IEC S,
                                         LM58.8 blade, LAC).pdf</a><button class="btn btn-subtle"
                                         style="height:25px;padding:0px 12px;margin-left:5px;"><i
@@ -305,7 +316,9 @@
                         <h3>DNV GL, 2018-11-14</h3>
                     </div>
                     <div class="block block-bordered">
-                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not fully supported.</p>
+                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and
+                            Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not
+                            fully supported.</p>
                     </div>
                 </div>
             </div>
@@ -320,7 +333,9 @@
                         <h3>Goldwind，2018-12-05</h3>
                     </div>
                     <div class="block block-bordered">
-                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not fully supported.</p>
+                        <p>At this time the Data Explorer in the emulator only fully supports clients for SQL API and
+                            Azure Cosmos DB's API for MongoDB. Clients for Table, Graph, and Cassandra APIs are not
+                            fully supported.</p>
                     </div>
                 </div>
             </div>
@@ -354,7 +369,7 @@
                             class="fal fa-expand-alt"></i></button>
                     <label class="badge badge-warning" style="float:right;">O</label>
                     <label class="badge badge-info" style="float:right;">NC</label>
-                    <label class="badge badge-dark" style="float:right;">Node</label>
+                    <label class="badge badge-dark" style="float:right;">Loads</label>
                     <label style="float:right;margin:3px;"><i class="fal fa-reply"></i>DNVGL,2018-12-05</label>
                 </div>
             </div>
@@ -371,11 +386,15 @@
                             class="fal fa-compress-alt"></i></button>
                     <label class="badge badge-warning" style="float:right;">O</label>
                     <label class="badge badge-info" style="float:right;">NC</label>
-                    <label class="badge badge-dark" style="float:right;">Node</label>
+                    <label class="badge badge-dark" style="float:right;">Loads</label>
                 </div>
                 <div class="block block-bordered">
                     <h2>DRC or BLC in DLC1.2</h2>
-                    <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is different than the service. For example, the emulator uses standard OS components such as the local file system for persistence, and the HTTPS protocol stack for connectivity. Functionality that relies on Azure infrastructure like global replication, single-digit millisecond latency for reads/writes, and tunable consistency levels are unavailable.</p>
+                    <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is
+                        different than the service. For example, the emulator uses standard OS components such as the
+                        local file system for persistence, and the HTTPS protocol stack for connectivity. Functionality
+                        that relies on Azure infrastructure like global replication, single-digit millisecond latency
+                        for reads/writes, and tunable consistency levels are unavailable.</p>
                 </div>
             </div>
             <div style="margin-left: 120px;">
@@ -389,7 +408,11 @@
                         <h3>Goldwind，2018-10-22</h3>
                     </div>
                     <div class="block block-bordered">
-                        <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is different than the service. For example, the emulator uses standard OS components such as the local file system for persistence, and the HTTPS protocol stack for connectivity. Functionality that relies on Azure infrastructure like global replication, single-digit millisecond latency for reads/writes, and tunable consistency levels are unavailable.
+                        <p>While emulation of the Azure Cosmos DB service is faithful, the emulator's implementation is
+                            different than the service. For example, the emulator uses standard OS components such as
+                            the local file system for persistence, and the HTTPS protocol stack for connectivity.
+                            Functionality that relies on Azure infrastructure like global replication, single-digit
+                            millisecond latency for reads/writes, and tunable consistency levels are unavailable.
                         </p>
                         <div class="block block-transparent" style="padding:0px;">
                             <h3>Attachments:</h3>
@@ -412,7 +435,9 @@
                         <h3>DNV GL, 2018-11-14</h3>
                     </div>
                     <div class="block block-bordered">
-                        <p>Because the Azure Cosmos DB Emulator provides an emulated environment running on a local developer workstation, there are some differences in functionality between the emulator and an Azure Cosmos DB account in the cloud</p>
+                        <p>Because the Azure Cosmos DB Emulator provides an emulated environment running on a local
+                            developer workstation, there are some differences in functionality between the emulator and
+                            an Azure Cosmos DB account in the cloud</p>
                     </div>
                 </div>
             </div>
@@ -465,7 +490,7 @@
                     <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
                     <label class="badge badge-success" style="float:right;">C</label>
                     <label class="badge badge-info" style="float:right;">NC</label>
-                    <label class="badge badge-dark" style="float:right;">Node</label>
+                    <label class="badge badge-dark" style="float:right;">Loads</label>
                     <label style="float:right;margin:3px;"><i class="fal fa-reply"></i>Goldwind,2018-12-05</label>
                 </div>
             </div>
@@ -502,7 +527,7 @@
                     <button class="btn btn-flat" style="float:right;"><i class="fal fa-expand-alt"></i></button>
                     <label class="badge badge-warning" style="float:right;">O</label>
                     <label class="badge badge-info" style="float:right;">NC</label>
-                    <label class="badge badge-dark" style="float:right;">Node</label>
+                    <label class="badge badge-dark" style="float:right;">Loads</label>
                     <label style="float:right;margin:3px;"><i class="fal fa-reply"></i>DNVGL,2018-12-05</label>
                 </div>
             </div>
@@ -534,7 +559,11 @@
                 </div>
                 <div class="block block-bordered">
                     <h2>Hello World</h2>
-                    <p>When the Azure Cosmos DB Emulator launches, it automatically opens the Azure Cosmos DB Data Explorer in your browser. The address appears as https://localhost:8081/_explorer/index.html. If you close the explorer and would like to reopen it later, you can either open the URL in your browser or launch it from the Azure Cosmos DB Emulator in the Windows Tray Icon as shown below.</p>
+                    <p>When the Azure Cosmos DB Emulator launches, it automatically opens the Azure Cosmos DB Data
+                        Explorer in your browser. The address appears as https://localhost:8081/_explorer/index.html. If
+                        you close the explorer and would like to reopen it later, you can either open the URL in your
+                        browser or launch it from the Azure Cosmos DB Emulator in the Windows Tray Icon as shown below.
+                    </p>
                     <ul style="display: flex;list-style-type: none;float:right;">
                         <li style="padding-left:20px;"><button class="btn btn-cta">Approve</button></li>
                     </ul>
@@ -577,7 +606,7 @@
                                 <label class="custom-control-label" for="customRadio1">Tower</label></li>
                             <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
                                     class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Node</label></li>
+                                <label class="custom-control-label" for="customRadio2">Loads</label></li>
                             <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
                                     class="custom-control-input">
                                 <label class="custom-control-label" for="customRadio3">Turbin</label>
