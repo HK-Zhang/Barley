@@ -59,15 +59,35 @@
             <div style="width: 100%;float: left;">
                 <div class="block block-bordered" style="padding: 10px 29px;">
                     <div>
-                        <i class="fal fa-file-alt" style="margin-left:-29px;width:29px;font-size: 25px"></i>
-                        <h2 style="display:inline;">Documentation from customer</h2>
                         <button class="btn btn-flat" style="float:right;" onclick="demoliste()" id="lstbtne"><i
                                 class="fal fa-expand-alt"></i></button>
-                        <button class="btn btn-flat" style="float:right;display: none;" onclick="demoliste()"
-                            id="lstbtnc"><i class="fal fa-compress-alt"></i></button>
+                        <button class="btn btn-flat" style="float:right;display: none;" onclick="demoliste()" id="lstbtnc"><i
+                                class="fal fa-compress-alt"></i></button>
+                        <ul style="display: flex;list-style-type: none;padding-left:0px;justify-content: space-between">
+                            <li> <i class="fal fa-file-alt" style="margin-left:-29px;width:29px;font-size: 25px"></i>
+                                <h2 style="display:inline;">Documentation from customer</h2>
+                            </li>
+                            <li>
+                                <ul style="display: none;list-style-type: none;padding-left:0px;margin-top: 5px;" id="lstulc">
+                                    <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1">Tower</label></li>
+                                    <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                            class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2">Loads</label></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                     <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst1">
-                        <h2>List of reports</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left: 0px;margin:0px;justify-content: space-between">
+                            <li>
+                                <h2 style="margin-top:0px;">List of reports</h2>
+                            </li>
+                            <li><button class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;"
+                                    onclick="showDialog()"><i class="fal fa-plus"></i>Add</button></li>
+                        </ul>
                         <table class="table table-sm">
                             <thead>
                                 <tr>
@@ -106,7 +126,14 @@
                         </table>
                     </div>
                     <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst2">
-                        <h2>List of drawings</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left: 0px;margin:0px;justify-content: space-between">
+                            <li>
+                                <h2 style="margin-top:0px;">List of drawings</h2>
+                            </li>
+                            <li><button class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;"
+                                    onclick="showDialog()"><i class="fal fa-plus"></i>Add</button></li>
+                        </ul>
                         <table class="table table-sm">
                             <thead>
                                 <tr>
@@ -127,7 +154,14 @@
                         </table>
                     </div>
                     <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst3">
-                        <h2>List of specifications/manuals/instructions</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left: 0px;margin:0px;justify-content: space-between">
+                            <li>
+                                <h2 style="margin-top:0px;">List of specifications/manuals/instructions</h2>
+                            </li>
+                            <li><button class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;"
+                                    onclick="showDialog()"><i class="fal fa-plus"></i>Add</button></li>
+                        </ul>
                         <table class="table table-sm">
                             <thead>
                                 <tr>
@@ -141,7 +175,14 @@
                         </table>
                     </div>
                     <div class="block block-bordered" style="margin-top:20px;display: none;" id="lst4">
-                        <h2>List of documents taken for information only</h2>
+                        <ul
+                            style="display: flex;list-style-type: none;padding-left: 0px;margin:0px;justify-content: space-between">
+                            <li>
+                                <h2 style="margin-top:0px;">List of documents taken for information only</h2>
+                            </li>
+                            <li><button class="btn btn-primary" style="height:25px;padding:0px 12px;margin-left:5px;"
+                                    onclick="showDialog()"><i class="fal fa-plus"></i>Add</button></li>
+                        </ul>
                         <table class="table table-sm">
                             <thead>
                                 <tr>
@@ -621,9 +662,11 @@
                         <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
                                 class="custom-control-input">
                             <label class="custom-control-label" for="customRadio4">!High Importance</label></li>
-                        <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
+                            <li style="padding-right:40px;"><i class="fal fa-envelope" style="font-size:25px;vertical-align:middle;"></i>:<input type="text" id="inputName" class="form-control"
+                                style="padding:0px 6px;height:30px;margin-right: 1px;width:300px;display:inline;" placeholder="Other Mail Receivers" /></li>
+                        <!-- <li style="padding-right:40px;"><input type="radio" id="customRadio4" name="customRadio4"
                                 class="custom-control-input">
-                            <label class="custom-control-label" for="customRadio4">Receive email on Updates</label></li>
+                            <label class="custom-control-label" for="customRadio4">Receive email on Updates</label></li> -->
                     </ul>
                     <ul style="display: flex;list-style-type: none;float:right;">
                         <li style="padding-left:20px;"><button class="btn btn-secondary">Add Attachments</button></li>
@@ -716,6 +759,7 @@
                 document.getElementById("lst4").style.display = "block";
                 document.getElementById("lstbtne").style.display = "none";
                 document.getElementById("lstbtnc").style.display = "block";
+                document.getElementById("lstulc").style.display = "flex";
             } else {
                 document.getElementById("lst1").style.display = "none";
                 document.getElementById("lst2").style.display = "none";
@@ -723,7 +767,7 @@
                 document.getElementById("lst4").style.display = "none";
                 document.getElementById("lstbtne").style.display = "block";
                 document.getElementById("lstbtnc").style.display = "none";
-
+                document.getElementById("lstulc").style.display = "none";
             }
 
         }
