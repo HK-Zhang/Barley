@@ -203,3 +203,10 @@
     display: flex;
     width: 40%
   }
+  .box17 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .box17 > div {
+    display: flex;
+  }

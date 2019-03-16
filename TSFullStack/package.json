@@ -32,13 +32,17 @@
   "dependencies": {
     "@overnightjs/core": "^1.4.1",
     "express": "^4.16.4",
-    "simple-color-print": "^1.0.5"
+    "sequelize": "^4.42.0",
+    "simple-color-print": "^1.0.5",
+    "sqlite3": "^4.0.6"
   },
   "devDependencies": {
     "@types/body-parser": "^1.17.0",
     "@types/express": "^4.16.0",
     "@types/jasmine": "^3.3.7",
     "@types/node": "^10.12.18",
+    "@types/sequelize": "^4.27.37",
+    "@types/sqlite3": "^3.1.4",
     "@types/supertest": "^2.0.7",
     "jasmine": "^3.3.1",
     "nodemon": "^1.18.10",
