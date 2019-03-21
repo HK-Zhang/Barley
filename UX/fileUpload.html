@@ -11,6 +11,9 @@
 <body>
     <input type="file" name="myFile" id="myFile" style="display:none;" onchange="javascript:console.log(1)">
     <label for="myFile">Choose your file</label>
+
+    <input type="file" id="selectedFile" style="display: none;" onchange="javascript:console.log(1)"/>
+    <input type="button" value="Browse..." onclick="document.getElementById('selectedFile').click();" />
 </body>
 
 </html>
