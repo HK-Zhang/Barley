@@ -5,6 +5,8 @@ import logo from './logo.svg';
 import './App.css';
 import InputDemo from './containers/inputDemo';
 import FormDemo from './containers/formDemo';
+import AlertDemo from './containers/alertDemo';
+
 
 import 'antd/dist/antd.css';
 
@@ -16,6 +18,7 @@ class App extends Component {
           <Switch>
             <Route path="/" component={InputDemo} exact />
             <Route path="/form" component={FormDemo} exact />
+            <Route path="/alert" component={AlertDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>

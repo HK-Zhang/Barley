@@ -1,9 +1,9 @@
 import React from 'react';
 import { Input } from 'antd';
 
-const Select = () => (
+const BasicInput = () => (
 	<Input placeholder="Basic usage" />
 );
 
 
-export default Select;
+export default BasicInput;
