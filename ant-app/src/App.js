@@ -8,6 +8,7 @@ import InputDemo from './containers/inputDemo';
 import FormDemo from './containers/formDemo';
 import AlertDemo from './containers/alertDemo';
 import Header from './components/header';
+import CheckboxDemo from './containers/checkboxDemo';
 
 
 import 'antd/dist/antd.css';
@@ -22,6 +23,7 @@ class App extends Component {
             <Route path="/" component={InputDemo} exact />
             <Route path="/form" component={FormDemo} exact />
             <Route path="/alert" component={AlertDemo} exact />
+            <Route path="/checkbox" component={CheckboxDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
