@@ -21,7 +21,7 @@ class App extends Component {
         <BrowserRouter>
         <Header></Header>
           <Switch>
-            <Route path="/" component={InputDemo} exact />
+            <Route path="/" component={CkeditorDemo} exact />
             <Route path="/form" component={FormDemo} exact />
             <Route path="/alert" component={AlertDemo} exact />
             <Route path="/checkbox" component={CheckboxDemo} exact />
