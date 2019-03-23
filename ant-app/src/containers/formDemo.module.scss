@@ -1,0 +1,11 @@
+.divframe {
+    composes: block from '../oneDesign.css';
+    composes: block-bordered from '../oneDesign.css';
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        padding-left: 0px;
+    }
+}
