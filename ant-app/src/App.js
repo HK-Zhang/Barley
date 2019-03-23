@@ -3,9 +3,11 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import GlobalState from './context/globalState';
 import logo from './logo.svg';
 import './App.css';
+import './oneDesign.css'
 import InputDemo from './containers/inputDemo';
 import FormDemo from './containers/formDemo';
 import AlertDemo from './containers/alertDemo';
+import Header from './components/header';
 
 
 import 'antd/dist/antd.css';
@@ -15,6 +17,7 @@ class App extends Component {
     return (
       <GlobalState>
         <BrowserRouter>
+        <Header></Header>
           <Switch>
             <Route path="/" component={InputDemo} exact />
             <Route path="/form" component={FormDemo} exact />
