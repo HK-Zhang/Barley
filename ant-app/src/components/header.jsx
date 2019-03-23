@@ -30,7 +30,7 @@ const Header = () => {
 
           <div className="navbar-dnvgl-iconbar d-flex">
             <span className="site-title">
-              Online VCS <span className="px-2">|</span>
+              ONE Prototype <span className="px-2">|</span>
             </span>
             <ul className="navbar-nav navbar-dnvgl-iconbar flex-row mr-lg-0">
               <li className="nav-item dropdown">
