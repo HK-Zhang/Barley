@@ -5,6 +5,7 @@ import LoginForm from '../components/loginForm';
 import RegistrationForm from '../components/registerForm';
 import SearchForm from '../components/searchForm';
 
+
 const FormDemo = () => (
     <React.Fragment>
         <div className={styles.divframe}>
