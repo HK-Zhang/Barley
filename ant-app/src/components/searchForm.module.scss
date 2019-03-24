@@ -1,0 +1,24 @@
+.ant_advanced_search_form {
+    padding: 24px;
+    background: #fbfbfb;
+    border: 1px solid #d9d9d9;
+    border-radius: 6px;
+  }
+  
+  .ant_advanced_search_form .ant_form_item {
+    display: flex;
+  }
+  
+  .ant_advanced_search_form .ant_form_item_control_wrapper {
+    flex: 1;
+  }
+
+  .search_result_list {
+    margin-top: 16px;
+    border: 1px dashed #e9e9e9;
+    border-radius: 6px;
+    background-color: #fafafa;
+    min-height: 200px;
+    text-align: center;
+    padding-top: 80px;
+}
