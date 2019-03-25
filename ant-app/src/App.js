@@ -10,6 +10,7 @@ import AlertDemo from './containers/alertDemo';
 import Header from './components/header';
 import CheckboxDemo from './containers/checkboxDemo';
 import StepForm from './containers/stepForm';
+import BadgeForm from './containers/badgeForm';
 
 
 import 'antd/dist/antd.css';
@@ -26,6 +27,7 @@ class App extends Component {
             <Route path="/alert" component={AlertDemo} exact />
             <Route path="/checkbox" component={CheckboxDemo} exact />
             <Route path="/step" component={StepForm} exact />
+            <Route path="/badge" component={BadgeForm} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
