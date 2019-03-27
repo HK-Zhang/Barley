@@ -12,6 +12,8 @@ import CheckboxDemo from './containers/checkboxDemo';
 import StepForm from './containers/stepForm';
 import BadgeForm from './containers/badgeForm';
 import NotificationForm from './containers/notificationDemo';
+import CascadeForm from './containers/cascadeDemo';
+
 
 
 import 'antd/dist/antd.css';
@@ -30,6 +32,7 @@ class App extends Component {
             <Route path="/step" component={StepForm} exact />
             <Route path="/badge" component={BadgeForm} exact />
             <Route path="/toaster" component={NotificationForm} exact />
+            <Route path="/cascade" component={CascadeForm} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>

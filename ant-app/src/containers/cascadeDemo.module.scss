@@ -1,0 +1,4 @@
+.divframe {
+    composes: block from '../oneDesign.css';
+    composes: block-bordered from '../oneDesign.css';
+}
