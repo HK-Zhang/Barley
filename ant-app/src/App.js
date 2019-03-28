@@ -13,7 +13,7 @@ import StepForm from './containers/stepForm';
 import BadgeForm from './containers/badgeForm';
 import NotificationForm from './containers/notificationDemo';
 import CascadeForm from './containers/cascadeDemo';
-
+import TimelineFrom from './containers/timeline';
 
 
 import 'antd/dist/antd.css';
@@ -33,6 +33,7 @@ class App extends Component {
             <Route path="/badge" component={BadgeForm} exact />
             <Route path="/toaster" component={NotificationForm} exact />
             <Route path="/cascade" component={CascadeForm} exact />
+            <Route path="/timeline" component={TimelineFrom} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
