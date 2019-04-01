@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;height:100%">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://onedesign.azureedge.net/onedesigncdn/2.0.0/oneDesign.css" />
+    <link rel="stylesheet" href="flex.css" />
+    <script defer="defer"
+        src="https://onedesign.azureedge.net/onedesigncdn/2.0.0-rc.3/js/fontawesome-all.min.js"></script>
+</head>
+
+<body style="max-width:1440px;margin:auto;">
+    <header>
+        <nav class="navbar navbar-expand-xl navbar-light navbar-dnvgl" style="padding-left:0px">
+
+            <a href="#" class="logonavbar-brand mr-5 mb-2">
+                <img class="logo-image" style="height:46px;" src="Logo-Standard-RGB.svg" />
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between align-items-end" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                </ul>
+
+                <div class="navbar-dnvgl-iconbar d-flex">
+                    <span class="site-title">Online VCS <span class="px-2">|</span></span>
+                    <ul class="navbar-nav navbar-dnvgl-iconbar flex-row mr-lg-0">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle mr-3 mr-lg-0" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fal fa-user-alt"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="dropdown-heading">Your profile</div>
+                                <div class="user-name">Cathrine Johansen</div>
+                                <hr role="separator" />
+                                <div class="dropdown-heading">Manage account</div>
+                                <a class="dropdown-item" href="#">Settings</a>
+                                <a class="dropdown-item" href="#">Log out</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link pr-2"><i class="fal fa-question-circle"></i></a>
+                        </li>
+                    </ul>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Modal -->
+        <div class="modal-dialog" style="max-width: 100%;margin-top: 8px;display: none" id="addprojdiv" tabindex="-1"
+            role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document" style="max-width: 100%;margin-top: 8px;" id="modal1">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title" id="exampleModalLabel" style="display:inline;">Create a project</h2>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            onclick="hideProject()">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="inputName">Title:</label>
+                        <input type="text" id="inputName" class="form-control" style="max-width:350px;" />
+                        <div style="margin-top:25px;">
+                            <div style="display:flex;justify-content: space-between">
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field A <button
+                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field B<button
+                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field C<button
+                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                            </div>
+                            <div style="display:flex;justify-content: space-between">
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field F<button
+                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field G<button
+                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%;padding-top: 25px"><button
+                                        class="btn btn-secondary"><i class="fal fa-plus"></i>New Field</button></div>
+                            </div>
+                        </div>
+                        <div style="margin-top:25px;">
+                            <label for="inputName">Category:</label>
+                            <ul style="display:flex;justify-content:flex-start;list-style: none;padding:0px;">
+                                <li style="padding-right:30px;">Non-Conformance <button class="btn btn-flat"><i
+                                            class="fal fa-minus-circle danger"></i></button></li>
+                                <li style="padding-right:30px;">Technical Query <button class="btn btn-flat"><i
+                                            class="fal fa-minus-circle danger"></i></button></li>
+                                <li style="padding-right:30px;">Editorial/Advice/For Info <button
+                                        class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></li>
+                                <li><button class="btn btn-flat"><i class="fal fa-plus-circle success"></i></button>
+                                </li>
+                            </ul>
+                            <label for="inputName">Item:</label>
+                            <div>
+                                <ul style="display:flex;justify-content:flex-start;list-style: none;padding:0px;">
+                                    <li style="padding-right:30px;">Tower <button class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></li>
+                                    <li style="padding-right:30px;">Loads <button class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></li>
+                                    <li><button class="btn btn-flat"><i class="fal fa-plus-circle success"></i></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div style="margin-top:25px;">
+                            <div style="display:flex;justify-content: space-between">
+                                <div style="flex: 1 1 auto; width: 33%"> <label for="inputName">Description</label>:
+                                    <textarea style="max-width:75%;" class="form-control"></textarea></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Customer</label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Link</label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-subtle" data-dismiss="modal"
+                            onclick="hideProject()">Cancel</button>
+                        <button type="button" class="btn btn-primary" onclick="hideProject()">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h1>Projects</h1>
+            <ul style="display: flex;list-style-type: none;padding-left: 0px;justify-content: space-between">
+                <li><button class="btn btn-primary" onclick="addProject()">Add</button></li>
+                <li> <div class="input-group mb-3"> 
+                        <input id="dateInput" class="form-control" style="min-width:350px;">
+                        <div class="input-group-append">
+                            <button class="btn btn-subtle" type="button">
+                                <i class="fal fa-search"></i>
+                            </button>
+                        </div>
+                    </div></li>
+                <li><input type="radio" id="customRadio4" name="customRadio4"
+                    class="custom-control-input">
+                <label class="custom-control-label" for="customRadio4">My Project</label></li>
+            </ul>       
+            <table class="table table-sm table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Customer</th>
+                        <th>Created Date</th>
+                        <th>Created By</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="http://127.0.0.1:8080/comments.html">Hello VCS</a></td>
+                        <td>GoodCustomer.com</td>
+                        <td>2019-4-1</td>
+                        <td>He Ke Zhang</td>
+                        <td><button class="btn btn-flat" style="float:right"><i class="fal fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label="table pagination">
+                <ul class="pagination justify-content-end pr-1">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                        <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">3</a>
+                    </li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+    <script>
+        function addProject() {
+            document.getElementById("addprojdiv").style.display = "block";
+        }
+
+        function hideProject() {
+            document.getElementById("addprojdiv").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
