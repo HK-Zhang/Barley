@@ -15,6 +15,7 @@ import NotificationForm from './containers/notificationDemo';
 import CascadeForm from './containers/cascadeDemo';
 import TimelineFrom from './containers/timeline';
 import MenuFrom from './containers/menuDemo';
+import SwitchForm from './containers/switchDemo';
 
 
 import 'antd/dist/antd.css';
@@ -36,6 +37,7 @@ class App extends Component {
             <Route path="/cascade" component={CascadeForm} exact />
             <Route path="/timeline" component={TimelineFrom} exact />
             <Route path="/menu" component={MenuFrom} exact />
+            <Route path="/switch" component={SwitchForm} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
