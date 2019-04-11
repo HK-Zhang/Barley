@@ -31,6 +31,7 @@ class App extends Component {
         <Header></Header>
           <Switch>
             <Route path="/" component={InputDemo} exact />
+            <Route path="/:id" component={FormDemo} exact />
             <Route path="/form" component={FormDemo} exact />
             <Route path="/alert" component={AlertDemo} exact />
             <Route path="/checkbox" component={CheckboxDemo} exact />
