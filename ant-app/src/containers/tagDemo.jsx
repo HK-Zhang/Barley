@@ -3,7 +3,9 @@ import React, { Component } from 'react';
 import styles from './tagDemo.module.scss';
 import DynamicTag from '../components/dynamicTag';
 import CheckTag from '../components/CheckableTag';
-
+import HotTag from '../components/hotTag';
+import EditableTagGroup from '../components/editableTag';
+import VisibleTag from '../components/visibleTag';
 
 function log(e) {
     console.log(e);
@@ -62,6 +64,18 @@ const TagDemo = () => (
                 <CheckTag>Tag2</CheckTag>
                 <CheckTag>Tag3</CheckTag>
             </div>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Hot Tag</h2>
+            <HotTag></HotTag>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Animate</h2>
+            <EditableTagGroup></EditableTagGroup>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Controller</h2>
+            <VisibleTag></VisibleTag>
         </div>
     </React.Fragment>
 );
