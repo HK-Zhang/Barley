@@ -17,6 +17,7 @@ import TimelineFrom from './containers/timeline';
 import MenuFrom from './containers/menuDemo';
 import SwitchForm from './containers/switchDemo';
 import TagDemo from './containers/tagDemo';
+import TopDemo from './containers/topDemo';
 
 
 import 'antd/dist/antd.css';
@@ -40,6 +41,7 @@ class App extends Component {
             <Route path="/menu" component={MenuFrom} exact />
             <Route path="/switch" component={SwitchForm} exact />
             <Route path="/tag" component={TagDemo} exact />
+            <Route path="/top" component={TopDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>

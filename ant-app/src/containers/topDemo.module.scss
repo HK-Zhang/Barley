@@ -1,0 +1,21 @@
+.divframe {
+    composes: block from '../oneDesign.css';
+    composes: block-bordered from '../oneDesign.css';
+
+}
+
+.ant_back_top_inner {
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 4px;
+    background-color: #1088e9;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .ant_back_top {
+    bottom: 100px;
+  }
+  
