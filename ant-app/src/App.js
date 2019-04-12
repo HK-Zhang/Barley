@@ -19,6 +19,7 @@ import SwitchForm from './containers/switchDemo';
 import TagDemo from './containers/tagDemo';
 import TopDemo from './containers/topDemo';
 import DividerForm from './containers/dividerDemo';
+import AnchorForm from './containers/anchorDemo';
 
 
 import 'antd/dist/antd.css';
@@ -31,7 +32,7 @@ class App extends Component {
         <Header></Header>
           <Switch>
             <Route path="/" component={InputDemo} exact />
-            <Route path="/:id" component={FormDemo} exact />
+            {/* <Route path="/:id" component={FormDemo} exact /> */}
             <Route path="/form" component={FormDemo} exact />
             <Route path="/alert" component={AlertDemo} exact />
             <Route path="/checkbox" component={CheckboxDemo} exact />
@@ -45,6 +46,7 @@ class App extends Component {
             <Route path="/tag" component={TagDemo} exact />
             <Route path="/top" component={TopDemo} exact />
             <Route path="/divider" component={DividerForm} exact />
+            <Route path="/anchor" component={AnchorForm} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
