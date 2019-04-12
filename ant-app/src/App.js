@@ -20,6 +20,8 @@ import TagDemo from './containers/tagDemo';
 import TopDemo from './containers/topDemo';
 import DividerForm from './containers/dividerDemo';
 import AnchorForm from './containers/anchorDemo';
+import TooltipForm from './containers/toolTipDemo';
+
 
 
 import 'antd/dist/antd.css';
@@ -47,6 +49,7 @@ class App extends Component {
             <Route path="/top" component={TopDemo} exact />
             <Route path="/divider" component={DividerForm} exact />
             <Route path="/anchor" component={AnchorForm} exact />
+            <Route path="/tooltip" component={TooltipForm} exact />            
           </Switch>
         </BrowserRouter>
       </GlobalState>
