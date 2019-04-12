@@ -227,7 +227,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block bg-land-green-lightest">
+                    <div class="block bg-sky-blue-lightest">
                         <h2>Filter by Category</h2>
                         <ul
                             style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
@@ -245,7 +245,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block bg-cyan-lightest">
+                    <div class="block bg-sky-blue-lightest">
                         <h2>Filter by Item</h2>
                         <ul
                             style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
@@ -259,7 +259,7 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="block bg-neutral-10">
+                    <div class="block bg-sky-blue-lightest">
                         <h2>Filter by Priority</h2>
                         <ul
                             style="display: flex;list-style-type: none;padding-left:0px;float: left;padding-left: 28px;">
@@ -271,6 +271,188 @@
                 </div>
             </div>
         </section>
+        <section id="section5o">
+            <div>
+                <div class="block block-bordered bg-sky-blue" style="padding: 10px 29px;">
+                    <h3 style="display:inline;">Interfaces</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo5o()"><i
+                            class="fal fa-expand-alt"></i></button>
+                    <label class="badge badge-dark" style="float:right;">Tower</label>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;display: none;" id="section5d">
+            <div style="display: flex;justify-content:space-between;">
+                <div style="width: 100%;">
+                    <div class="block block-bordered bg-sky-blue"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3 style="display:inline;">Interfaces</h3>
+                        <button class="btn btn-flat" style="float:right;" onclick="demo5d()"><i
+                                class="fal fa-compress-alt"></i></button>
+                        <label class="badge badge-dark" style="float:right;">Tower</label>
+                    </div>
+                    <div class="block block-bordered">
+                        <h2>Interface to other systems/components: </h2>
+                        <ul>
+                            <li>Bolted connection between top flange and yaw system is not covered by this verification.</li>
+                            <li>The verification of the top flange is not covered by this verification.</li>
+                            <li>Bottom T- flange is covered by this verification, however, the bolted connection between bottom
+                                T- flange and foundation is not covered by this verification.</li>
+                            <li>Clearance between blade tip and tower is not covered by this verification.</li>
+                            <li>Transport and installation loads are not covered in this verification.</li>
+                            <li>The design loads are taken for information only and not part of this verification. </li>
+                            <li>Personal safety issue related to the internal secondary structure is not covered by this
+                                verification. </li>
+                            <li>During installation, the towers should not be left alone without the nacelle in wind speeds 14.6
+                                m/s or beyond. In addition, the preventing system for oscillation shall be installed when the
+                                complete tower stands alone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section6o">
+            <div>
+                <div class="block block-bordered bg-sky-blue" style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                    <h3 style="display:inline;">Interfaces</h3>
+                    <button class="btn btn-flat" style="float:right;" onclick="demo6o()"><i
+                            class="fal fa-expand-alt"></i></button>
+                </div>
+                <div class="block block-bordered">
+                    <input type="text" id="inputName" class="form-control" style="margin-bottom:10px;"
+                    placeholder="Type Subject" />
+                    <div class="custom-control custom-radio" style="padding-left:30px">
+                        <ul style="display: flex;list-style-type: none;padding-left:0px">
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio1" name="customRadio1"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Tower</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio2" name="customRadio2"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Loads</label></li>
+                            <li style="padding-right:40px;"><input type="radio" id="customRadio3" name="customRadio3"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio3">Turbin</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <textarea style="width:100%;min-height: 200px;" placeholder="Leave a comment"></textarea>
+                    <ul style="display:flex;list-style-type: none;justify-content: flex-end;">
+                        <li style="padding-left:20px;"><button class="btn btn-cta" onclick="demo4()">Publish</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section style="width:100%;display: none;" id="section6d">
+            <div style="display: flex;justify-content:space-between;">
+                <div style="width: 100%;">
+                    <div class="block block-bordered bg-sky-blue"
+                        style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                        <h3 style="display:inline;">Interfaces</h3>
+                        <button class="btn btn-flat" style="float:right;" onclick="demo5d()"><i
+                                class="fal fa-compress-alt"></i></button>
+                        <label class="badge badge-dark" style="float:right;">Load</label>
+                    </div>
+                    <div class="block block-bordered">
+                        <h2>Interface to other systems/components: </h2>
+                        <ul>
+                            <li>Bolted connection between top flange and yaw system is not covered by this verification.</li>
+                            <li>The verification of the top flange is not covered by this verification.</li>
+                            <li>Bottom T- flange is covered by this verification, however, the bolted connection between bottom
+                                T- flange and foundation is not covered by this verification.</li>
+                            <li>Clearance between blade tip and tower is not covered by this verification.</li>
+                            <li>Transport and installation loads are not covered in this verification.</li>
+                            <li>The design loads are taken for information only and not part of this verification. </li>
+                            <li>Personal safety issue related to the internal secondary structure is not covered by this
+                                verification. </li>
+                            <li>During installation, the towers should not be left alone without the nacelle in wind speeds 14.6
+                                m/s or beyond. In addition, the preventing system for oscillation shall be installed when the
+                                complete tower stands alone.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="section7o">
+                <div>
+                    <div class="block block-bordered bg-sky-blue" style="padding: 10px 29px;">
+                        <h3 style="display:inline;">Additional text</h3>
+                        <button class="btn btn-flat" style="float:right;" onclick="demo6o()"><i
+                                class="fal fa-expand-alt"></i></button>
+                        <label class="badge badge-dark" style="float:right;">Tower</label>
+                    </div>
+                </div>
+            </section>
+            <section style="width:100%;display: none;" id="section7d">
+                <div style="display: flex;justify-content:space-between;">
+                    <div style="width: 100%;">
+                        <div class="block block-bordered bg-sky-blue"
+                            style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                            <h3 style="display:inline;">Additional text</h3>
+                            <button class="btn btn-flat" style="float:right;" onclick="demo5d()"><i
+                                    class="fal fa-compress-alt"></i></button>
+                            <label class="badge badge-dark" style="float:right;">Tower</label>
+                        </div>
+                        <div class="block block-bordered">
+                            <h2>Interface to other systems/components: </h2>
+                            <ul>
+                                <li>Bolted connection between top flange and yaw system is not covered by this verification.</li>
+                                <li>The verification of the top flange is not covered by this verification.</li>
+                                <li>Bottom T- flange is covered by this verification, however, the bolted connection between bottom
+                                    T- flange and foundation is not covered by this verification.</li>
+                                <li>Clearance between blade tip and tower is not covered by this verification.</li>
+                                <li>Transport and installation loads are not covered in this verification.</li>
+                                <li>The design loads are taken for information only and not part of this verification. </li>
+                                <li>Personal safety issue related to the internal secondary structure is not covered by this
+                                    verification. </li>
+                                <li>During installation, the towers should not be left alone without the nacelle in wind speeds 14.6
+                                    m/s or beyond. In addition, the preventing system for oscillation shall be installed when the
+                                    complete tower stands alone.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="section8o">
+                    <div>
+                        <div class="block block-bordered bg-sky-blue" style="padding: 10px 29px;">
+                            <h3 style="display:inline;">Additional text</h3>
+                            <button class="btn btn-flat" style="float:right;" onclick="demo6o()"><i
+                                    class="fal fa-expand-alt"></i></button>
+                            <label class="badge badge-dark" style="float:right;">Load</label>
+                        </div>
+                    </div>
+                </section>
+                <section style="width:100%;display: none;" id="section8d">
+                    <div style="display: flex;justify-content:space-between;">
+                        <div style="width: 100%;">
+                            <div class="block block-bordered bg-sky-blue"
+                                style="margin-bottom:0px;border-bottom-width:0px;padding:10px 29px;">
+                                <h3 style="display:inline;">Additional text</h3>
+                                <button class="btn btn-flat" style="float:right;" onclick="demo5d()"><i
+                                        class="fal fa-compress-alt"></i></button>
+                                <label class="badge badge-dark" style="float:right;">Load</label>
+                            </div>
+                            <div class="block block-bordered">
+                                <h2>Interface to other systems/components: </h2>
+                                <ul>
+                                    <li>Bolted connection between top flange and yaw system is not covered by this verification.</li>
+                                    <li>The verification of the top flange is not covered by this verification.</li>
+                                    <li>Bottom T- flange is covered by this verification, however, the bolted connection between bottom
+                                        T- flange and foundation is not covered by this verification.</li>
+                                    <li>Clearance between blade tip and tower is not covered by this verification.</li>
+                                    <li>Transport and installation loads are not covered in this verification.</li>
+                                    <li>The design loads are taken for information only and not part of this verification. </li>
+                                    <li>Personal safety issue related to the internal secondary structure is not covered by this
+                                        verification. </li>
+                                    <li>During installation, the towers should not be left alone without the nacelle in wind speeds 14.6
+                                        m/s or beyond. In addition, the preventing system for oscillation shall be installed when the
+                                        complete tower stands alone.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
         <section id="section1o">
             <div>
                 <div class="block block-bordered bg-sky-blue-lightest"
@@ -751,6 +933,16 @@
         function demo2d() {
             document.getElementById("section2o").style.display = "block";
             document.getElementById("section2d").style.display = "none";
+        }
+
+        function demo5o() {
+            document.getElementById("section5d").style.display = "block";
+            document.getElementById("section5o").style.display = "none";
+        }
+
+        function demo5d() {
+            document.getElementById("section5o").style.display = "block";
+            document.getElementById("section5d").style.display = "none";
         }
 
         function demo3o() {

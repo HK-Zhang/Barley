@@ -67,27 +67,32 @@
                         <label for="inputName">Title:</label>
                         <input type="text" id="inputName" class="form-control" style="max-width:350px;" />
                         <div style="margin-top:25px;">
-                            <div style="display:flex;justify-content: space-between">
-                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field A <button
-                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
-                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
-                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field B<button
-                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
-                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
-                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field C<button
-                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
-                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
-                            </div>
-                            <div style="display:flex;justify-content: space-between">
-                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field F<button
-                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
-                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
-                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Field G<button
-                                    class="btn btn-flat"><i class="fal fa-minus-circle danger"></i></button></label>:<input
-                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
-                                <div style="flex: 1 1 auto; width: 33%;padding-top: 25px"><button
-                                        class="btn btn-secondary"><i class="fal fa-plus"></i>New Field</button></div>
-                            </div>
+                            <ul style="display:flex;justify-content: space-between;list-style: none;padding: 0px;">
+                                <li style="flex: 1 1 auto; width: 33%"><label for="inputName">Field A <button
+                                            class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></li>
+                                <li style="flex: 1 1 auto; width: 33%"><label for="inputName">Field B<button
+                                            class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></li>
+                                <li style="flex: 1 1 auto; width: 33%"><label for="inputName">Field C<button
+                                            class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></li>
+                            </ul>
+                            <ul style="display:flex;justify-content: space-between;list-style: none;padding: 0px;">
+                                <li style="flex: 1 1 auto; width: 33%"><label for="inputName">Field F<button
+                                            class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></li>
+                                <li style="flex: 1 1 auto; width: 33%"><label for="inputName">Field G<button
+                                            class="btn btn-flat"><i
+                                                class="fal fa-minus-circle danger"></i></button></label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></li>
+                                <li style="flex: 1 1 auto; width: 33%;padding-top: 25px"><button
+                                        class="btn btn-secondary"><i class="fal fa-plus"></i>New Field</button></li>
+                            </ul>
                         </div>
                         <div style="margin-top:25px;">
                             <label for="inputName">Category:</label>
@@ -115,12 +120,20 @@
                         </div>
                         <div style="margin-top:25px;">
                             <div style="display:flex;justify-content: space-between">
-                                <div style="flex: 1 1 auto; width: 33%"> <label for="inputName">Description</label>:
-                                    <textarea style="max-width:75%;" class="form-control"></textarea></div>
                                 <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Customer</label>:<input
                                         type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Customer Admin
+                                        User</label>:<input type="text" id="inputName" class="form-control"
+                                        style="max-width:75%;" /></div>
                                 <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Link</label>:<input
                                         type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                            </div>
+                            <div style="display:flex;justify-content: space-between">
+                                <div style="flex: 1 1 auto; width: 33%"> <label for="inputName">Description</label>:
+                                    <textarea style="max-width:75%;" class="form-control"></textarea></div>
+                                <div style="flex: 1 1 auto; width: 33%"><label for="inputName">Searchable Keywords</label>:<input
+                                        type="text" id="inputName" class="form-control" style="max-width:75%;" /></div>
+                                <div style="flex: 1 1 auto; width: 33%"></div>
                             </div>
                         </div>
                     </div>
@@ -136,18 +149,19 @@
             <h1>Projects</h1>
             <ul style="display: flex;list-style-type: none;padding-left: 0px;justify-content: space-between">
                 <li><button class="btn btn-primary" onclick="addProject()">Add</button></li>
-                <li> <div class="input-group mb-3"> 
+                <li>
+                    <div class="input-group mb-3">
                         <input id="dateInput" class="form-control" style="min-width:350px;">
                         <div class="input-group-append">
                             <button class="btn btn-subtle" type="button">
                                 <i class="fal fa-search"></i>
                             </button>
                         </div>
-                    </div></li>
-                <li><input type="radio" id="customRadio4" name="customRadio4"
-                    class="custom-control-input">
-                <label class="custom-control-label" for="customRadio4">My Project</label></li>
-            </ul>       
+                    </div>
+                </li>
+                <li><input type="radio" id="customRadio4" name="customRadio4" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadio4">My Project</label></li>
+            </ul>
             <table class="table table-sm table-striped table-hover">
                 <thead>
                     <tr>
