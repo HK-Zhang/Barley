@@ -21,6 +21,7 @@ import TopDemo from './containers/topDemo';
 import DividerForm from './containers/dividerDemo';
 import AnchorForm from './containers/anchorDemo';
 import TooltipForm from './containers/toolTipDemo';
+import PopoverForm from './containers/popoverDemo';
 
 
 
@@ -49,7 +50,8 @@ class App extends Component {
             <Route path="/top" component={TopDemo} exact />
             <Route path="/divider" component={DividerForm} exact />
             <Route path="/anchor" component={AnchorForm} exact />
-            <Route path="/tooltip" component={TooltipForm} exact />            
+            <Route path="/tooltip" component={TooltipForm} exact /> 
+            <Route path="/popover" component={PopoverForm} exact />            
           </Switch>
         </BrowserRouter>
       </GlobalState>
