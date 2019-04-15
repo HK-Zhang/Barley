@@ -23,7 +23,7 @@ import AnchorForm from './containers/anchorDemo';
 import TooltipForm from './containers/toolTipDemo';
 import PopoverForm from './containers/popoverDemo';
 import RateFrom from './containers/rateDemo';
-
+import MessageForm from './containers/messageDemo';
 
 
 import 'antd/dist/antd.css';
@@ -53,7 +53,8 @@ class App extends Component {
             <Route path="/anchor" component={AnchorForm} exact />
             <Route path="/tooltip" component={TooltipForm} exact /> 
             <Route path="/popover" component={PopoverForm} exact />
-            <Route path="/rate" component={RateFrom} exact />            
+            <Route path="/rate" component={RateFrom} exact />  
+            <Route path="/message" component={MessageForm} exact />            
           </Switch>
         </BrowserRouter>
       </GlobalState>
