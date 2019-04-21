@@ -24,6 +24,7 @@ import TooltipForm from './containers/toolTipDemo';
 import PopoverForm from './containers/popoverDemo';
 import RateFrom from './containers/rateDemo';
 import MessageForm from './containers/messageDemo';
+import ModalForm from './containers/modalDemo';
 
 
 import 'antd/dist/antd.css';
@@ -54,7 +55,8 @@ class App extends Component {
             <Route path="/tooltip" component={TooltipForm} exact /> 
             <Route path="/popover" component={PopoverForm} exact />
             <Route path="/rate" component={RateFrom} exact />  
-            <Route path="/message" component={MessageForm} exact />            
+            <Route path="/message" component={MessageForm} exact />
+            <Route path="/modal" component={ModalForm} exact />              
           </Switch>
         </BrowserRouter>
       </GlobalState>

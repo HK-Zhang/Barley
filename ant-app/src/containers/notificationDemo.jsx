@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button, notification } from 'antd';
-import styles from './inputDemo.module.scss';
+import styles from './notificationDemo.module.scss';
 
 const openNotification = () => {
     notification.open({
