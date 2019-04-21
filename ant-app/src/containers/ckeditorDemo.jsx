@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './ckeditorDemo.module.scss';
 import CKEditor from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import ClassicEditor from 'ckeditor5-build-vcs';
 
 const CkeditorDemo = () => (
 	<div className={styles.divframe}>
