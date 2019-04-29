@@ -8,6 +8,7 @@
     "rc-tween-one": "^2.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-highlight-words": "^0.16.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8"
   },

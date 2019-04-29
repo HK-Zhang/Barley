@@ -6,6 +6,8 @@ import SelectionTable from '../components/table/selectionTable';
 import SelOpsTable from '../components/table/selopsTable';
 import CustomSelectionTable from '../components/table/customSelTable';
 import FilterSorterTable from '../components/table/filterSorterTable';
+import ResetFilterTable from '../components/table/resetFilterTable';
+import FilterPanelTable from '../components/table/filterPanelTable';
 
 const TableDemo = () => (
     <React.Fragment>
@@ -30,8 +32,16 @@ const TableDemo = () => (
             <CustomSelectionTable></CustomSelectionTable>
         </div>
         <div className={styles.divframe}>
-            <h2>Reset filters and sorters</h2>
+            <h2>Filter and sorter</h2>
             <FilterSorterTable></FilterSorterTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Reset filters and sorters</h2>
+            <ResetFilterTable></ResetFilterTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Customized filter panel</h2>
+            <FilterPanelTable></FilterPanelTable>
         </div>
     </React.Fragment>
 )
