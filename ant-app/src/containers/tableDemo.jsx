@@ -11,6 +11,9 @@ import FilterPanelTable from '../components/table/filterPanelTable';
 import AjaxTable from '../components/table/ajaxTable';
 import SizeTable from '../components/table/sizeTable';
 import BorderTable from '../components/table/borderTable';
+import ExpandableTable from '../components/table/expandableTable';
+import SpanTable from '../components/table/spanTable';
+import TreeTable from '../components/table/treeTable';
 
 const TableDemo = () => (
     <React.Fragment>
@@ -57,6 +60,18 @@ const TableDemo = () => (
         <div className={styles.divframe}>
             <h2>border, title and footer</h2>
             <BorderTable></BorderTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Expandable Row</h2>
+            <ExpandableTable></ExpandableTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>colSpan and rowSpan</h2>
+            <SpanTable></SpanTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Tree Data</h2>
+            <TreeTable></TreeTable>
         </div>
     </React.Fragment>
 )
