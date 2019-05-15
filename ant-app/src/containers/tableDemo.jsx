@@ -14,6 +14,9 @@ import BorderTable from '../components/table/borderTable';
 import ExpandableTable from '../components/table/expandableTable';
 import SpanTable from '../components/table/spanTable';
 import TreeTable from '../components/table/treeTable';
+import FixedHeaderTable from '../components/table/fixheadTable';
+import FixedColTable from '../components/table/fixedColTable';
+import FixedTable from '../components/table/fixedTable';
 
 const TableDemo = () => (
     <React.Fragment>
@@ -72,6 +75,18 @@ const TableDemo = () => (
         <div className={styles.divframe}>
             <h2>Tree Data</h2>
             <TreeTable></TreeTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Fix Header Data</h2>
+            <FixedHeaderTable></FixedHeaderTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Fix Columns</h2>
+            <FixedColTable></FixedColTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Fix Table</h2>
+            <FixedTable></FixedTable>
         </div>
     </React.Fragment>
 )
