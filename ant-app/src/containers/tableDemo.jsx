@@ -17,6 +17,8 @@ import TreeTable from '../components/table/treeTable';
 import FixedHeaderTable from '../components/table/fixheadTable';
 import FixedColTable from '../components/table/fixedColTable';
 import FixedTable from '../components/table/fixedTable';
+import GroupHeaderTable from '../components/table/groupHeadTable';
+import AddRowTable from '../components/table/addRowTable';
 
 const TableDemo = () => (
     <React.Fragment>
@@ -87,6 +89,14 @@ const TableDemo = () => (
         <div className={styles.divframe}>
             <h2>Fix Table</h2>
             <FixedTable></FixedTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Grouping table head</h2>
+            <GroupHeaderTable></GroupHeaderTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Add Row</h2>
+            <AddRowTable></AddRowTable>
         </div>
     </React.Fragment>
 )
