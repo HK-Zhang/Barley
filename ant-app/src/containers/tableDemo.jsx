@@ -19,6 +19,8 @@ import FixedColTable from '../components/table/fixedColTable';
 import FixedTable from '../components/table/fixedTable';
 import GroupHeaderTable from '../components/table/groupHeadTable';
 import AddRowTable from '../components/table/addRowTable';
+import EditableRowTable from '../components/table/editableRowTable';
+
 
 const TableDemo = () => (
     <React.Fragment>
@@ -97,6 +99,10 @@ const TableDemo = () => (
         <div className={styles.divframe}>
             <h2>Add Row</h2>
             <AddRowTable></AddRowTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Editable Rows</h2>
+            <EditableRowTable></EditableRowTable>
         </div>
     </React.Fragment>
 )
