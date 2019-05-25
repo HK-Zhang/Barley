@@ -20,7 +20,9 @@ import FixedTable from '../components/table/fixedTable';
 import GroupHeaderTable from '../components/table/groupHeadTable';
 import AddRowTable from '../components/table/addRowTable';
 import EditableRowTable from '../components/table/editableRowTable';
-
+import NestedRowTable from '../components/table/nestedTable';
+import DragRowTable from '../components/table/dragTable';
+import ResizableTable from '../components/table/resizeableTable';
 
 const TableDemo = () => (
     <React.Fragment>
@@ -103,6 +105,18 @@ const TableDemo = () => (
         <div className={styles.divframe}>
             <h2>Editable Rows</h2>
             <EditableRowTable></EditableRowTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Nested Rows</h2>
+            <NestedRowTable></NestedRowTable>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Drag sorting</h2>
+            <DragRowTable></DragRowTable>
+        </div>
+        <div>
+            <h2>Resizable Table</h2>
+            <ResizableTable></ResizableTable>
         </div>
     </React.Fragment>
 )
