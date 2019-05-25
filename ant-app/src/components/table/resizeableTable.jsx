@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Table } from 'antd';
+import './resizeableTable.module.css'; // igored by react
 import { Resizable } from 'react-resizable';
-import './resizeableTable.module.scss';
 
 const ResizeableTitle = props => {
     const { onResize, width, ...restProps } = props;
