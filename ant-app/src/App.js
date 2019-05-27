@@ -26,6 +26,7 @@ import RateFrom from './containers/rateDemo';
 import MessageForm from './containers/messageDemo';
 import ModalForm from './containers/modalDemo';
 import TableForm from './containers/tableDemo';
+import TreeSelectDemo from './containers/treeSelectDemo';
 
 
 import 'antd/dist/antd.css';
@@ -58,7 +59,8 @@ class App extends Component {
             <Route path="/rate" component={RateFrom} exact />  
             <Route path="/message" component={MessageForm} exact />
             <Route path="/modal" component={ModalForm} exact />        
-            <Route path="/table" component={TableForm} exact />       
+            <Route path="/table" component={TableForm} exact /> 
+            <Route path="/treeselect" component={TreeSelectDemo} exact />       
           </Switch>
         </BrowserRouter>
       </GlobalState>
