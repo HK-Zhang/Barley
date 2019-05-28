@@ -27,6 +27,7 @@ import MessageForm from './containers/messageDemo';
 import ModalForm from './containers/modalDemo';
 import TableForm from './containers/tableDemo';
 import TreeSelectDemo from './containers/treeSelectDemo';
+import DatepickerDemo from './containers/datepickerDemo';
 
 
 import 'antd/dist/antd.css';
@@ -60,7 +61,8 @@ class App extends Component {
             <Route path="/message" component={MessageForm} exact />
             <Route path="/modal" component={ModalForm} exact />        
             <Route path="/table" component={TableForm} exact /> 
-            <Route path="/treeselect" component={TreeSelectDemo} exact />       
+            <Route path="/treeselect" component={TreeSelectDemo} exact /> 
+            <Route path="/date" component={DatepickerDemo} exact />       
           </Switch>
         </BrowserRouter>
       </GlobalState>
