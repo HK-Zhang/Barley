@@ -13,6 +13,8 @@ const FormatDatepicker = () => (
     <div>
         <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} size="large" />
         <br />
+        <DatePicker defaultValue={moment('2015/01/01', dateFormat)} format={dateFormat} size="large" disabled />
+        <br />
         <DatePicker defaultValue={moment('01/01/2015', dateFormatList[0])} format={dateFormatList} size="default" />
         <br />
         <MonthPicker defaultValue={moment('2015/01', monthFormat)} format={monthFormat} size="small" />
