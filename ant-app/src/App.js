@@ -31,6 +31,7 @@ import DatepickerDemo from './containers/datepickerDemo';
 import TimepickerDemo from './containers/timepickerDemo';
 import UploadDemo from './containers/uploadDemo';
 import DescriptionDemo from './containers/descriptionDemo';
+import GridDemo from './containers/GridDemo';
 
 
 import 'antd/dist/antd.css';
@@ -69,7 +70,7 @@ class App extends Component {
             <Route path="/time" component={TimepickerDemo} exact />       
             <Route path="/upload" component={UploadDemo} exact />
             <Route path="/Desc" component={DescriptionDemo} exact />
-
+            <Route path="/grid" component={GridDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
