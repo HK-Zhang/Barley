@@ -53,7 +53,7 @@ code {
   padding: 5px 0;
 }
 
-.ant-layout-header{
+/* .ant-layout-header{
   background:#7dbcea;
   color: #fff;
 }
@@ -73,8 +73,8 @@ code {
 .ant-layout-sider{
   background:#3ba0e9;
   color: #fff;
-  /* line-height: 120px; */
-}
+  line-height: 120px; 
+} */
 
 .logo {
   width: 120px;
