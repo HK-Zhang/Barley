@@ -33,6 +33,7 @@ import UploadDemo from './containers/uploadDemo';
 import DescriptionDemo from './containers/descriptionDemo';
 import GridDemo from './containers/GridDemo';
 import LayoutDemo from './containers/layoutDemo';
+import CardDemo from './containers/cardDemo';
 
 
 import 'antd/dist/antd.css';
@@ -73,6 +74,7 @@ class App extends Component {
             <Route path="/Desc" component={DescriptionDemo} exact />
             <Route path="/grid" component={GridDemo} exact />
             <Route path="/layout" component={LayoutDemo} exact />
+            <Route path="/card" component={CardDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>

@@ -5,6 +5,7 @@ import BasicLayout from '../components/layout/basicLayout';
 import HeaderContentFooter from '../components/layout/headerContentFooter';
 import HeaderSider from '../components/layout/headerSider';
 import HeaderSider2 from '../components/layout/headerSider2';
+import FixHeader from '../components/layout/fixHeader';
 
 
 const LayoutDemo = () => (
@@ -24,6 +25,10 @@ const LayoutDemo = () => (
         <div className={styles.divframe}>
             <h2>Header sider2</h2>
             <HeaderSider2></HeaderSider2>
+        </div>
+        <div className={styles.divframe}>
+            <h2>Fix Header</h2>
+            <FixHeader></FixHeader>
         </div>
     </React.Fragment>
 )
