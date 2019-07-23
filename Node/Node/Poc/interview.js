@@ -222,6 +222,7 @@ TestAsyncAwait = async () =>{
 
 }
 
+// introduction of generator: http://www.ruanyifeng.com/blog/2015/04/generator.html
 TestGenerator = () =>{
     var co = require('co');
     var rp = require("request-promise");
