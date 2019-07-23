@@ -75,6 +75,19 @@ class App extends Component {
       //   </div>
       // </Provider>
 
+      //React Router Demo
+      <Provider store={store}>
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+            <h1 className="App-title">Welcome to React</h1>
+          </header>
+          <PostForm />
+          <hr />
+          <Posts />
+        </div>
+      </Provider>
+
       //Demo
       // <React.Fragment>
       //   <NavBar totalCounters={this.state.counters.filter(c=> c.value>0).length}/>
@@ -89,14 +102,14 @@ class App extends Component {
       // </React.Fragment>
 
       // controlled component demo
-      <div className="container">
-        <div className="columns">
-          <div className="col-md-9 centered">
-            <h3>React.js Controlled Form Components</h3>
-            <FormContainer />
-          </div>
-        </div>
-      </div>
+      // <div className="container">
+      //   <div className="columns">
+      //     <div className="col-md-9 centered">
+      //       <h3>React.js Controlled Form Components</h3>
+      //       <FormContainer />
+      //     </div>
+      //   </div>
+      // </div>
     );
   }
 }
