@@ -34,6 +34,7 @@ import DescriptionDemo from './containers/descriptionDemo';
 import GridDemo from './containers/GridDemo';
 import LayoutDemo from './containers/layoutDemo';
 import CardDemo from './containers/cardDemo';
+import PopconfirmDemo from './containers/popconfirmDemo';
 
 
 import 'antd/dist/antd.css';
@@ -75,6 +76,7 @@ class App extends Component {
             <Route path="/grid" component={GridDemo} exact />
             <Route path="/layout" component={LayoutDemo} exact />
             <Route path="/card" component={CardDemo} exact />
+            <Route path="/popConfirm" component={PopconfirmDemo} exact />
           </Switch>
         </BrowserRouter>
       </GlobalState>
