@@ -5,7 +5,7 @@
   "dependencies": {
     "antd": "^3.21.4",
     "immutability-helper": "^3.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.11.0",
     "rc-tween-one": "^2.4.0",
     "react": "^16.8.4",
