@@ -15,7 +15,7 @@
     "react-highlight-words": "^0.16.0",
     "react-resizable": "^1.8.0",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "2.1.8",
+    "react-scripts": "5.0.1",
     "reqwest": "^2.0.5"
   },
   "scripts": {
